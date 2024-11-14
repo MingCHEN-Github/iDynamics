@@ -1,0 +1,171 @@
+2024-11-14 02:55:21,551 [ForkPoolWorker-8] Connected (version 2.0, client OpenSSH_8.9p1)
+2024-11-14 02:55:21,552 [ForkPoolWorker-7] Connected (version 2.0, client OpenSSH_8.9p1)
+2024-11-14 02:55:21,553 [ForkPoolWorker-3] Connected (version 2.0, client OpenSSH_8.9p1)
+2024-11-14 02:55:21,553 [ForkPoolWorker-1] Connected (version 2.0, client OpenSSH_8.9p1)
+2024-11-14 02:55:21,554 [ForkPoolWorker-5] Connected (version 2.0, client OpenSSH_8.9p1)
+2024-11-14 02:55:21,554 [ForkPoolWorker-2] Connected (version 2.0, client OpenSSH_8.9p1)
+2024-11-14 02:55:21,555 [ForkPoolWorker-6] Connected (version 2.0, client OpenSSH_8.9p1)
+2024-11-14 02:55:21,559 [ForkPoolWorker-9] Connected (version 2.0, client OpenSSH_8.9p1)
+2024-11-14 02:55:21,559 [ForkPoolWorker-4] Connected (version 2.0, client OpenSSH_8.9p1)
+2024-11-14 02:55:21,618 [ForkPoolWorker-3] Authentication (publickey) successful!
+2024-11-14 02:55:21,619 [ForkPoolWorker-1] Authentication (publickey) successful!
+2024-11-14 02:55:21,620 [ForkPoolWorker-5] Authentication (publickey) successful!
+2024-11-14 02:55:21,620 [ForkPoolWorker-8] Authentication (publickey) successful!
+2024-11-14 02:55:21,621 [ForkPoolWorker-6] Authentication (publickey) successful!
+2024-11-14 02:55:21,621 [ForkPoolWorker-7] Authentication (publickey) successful!
+2024-11-14 02:55:21,623 [ForkPoolWorker-2] Authentication (publickey) successful!
+2024-11-14 02:55:21,625 [ForkPoolWorker-4] Authentication (publickey) successful!
+2024-11-14 02:55:21,642 [ForkPoolWorker-9] Authentication (publickey) successful!
+2024-11-14 02:55:22,205 [ForkPoolWorker-8] Bandwidth cleared for k8s-worker-8
+2024-11-14 02:55:22,205 [ForkPoolWorker-8] Setting bandwidth between k8s-worker-8 and k8s-worker-1: 592 Mbps
+2024-11-14 02:55:22,244 [ForkPoolWorker-3] Bandwidth cleared for k8s-worker-3
+2024-11-14 02:55:22,244 [ForkPoolWorker-3] Setting bandwidth between k8s-worker-3 and k8s-worker-1: 462 Mbps
+2024-11-14 02:55:22,261 [ForkPoolWorker-5] Bandwidth cleared for k8s-worker-5
+2024-11-14 02:55:22,261 [ForkPoolWorker-5] Setting bandwidth between k8s-worker-5 and k8s-worker-1: 682 Mbps
+2024-11-14 02:55:22,273 [ForkPoolWorker-1] Bandwidth cleared for k8s-worker-1
+2024-11-14 02:55:22,273 [ForkPoolWorker-1] Setting bandwidth between k8s-worker-1 and k8s-worker-2: 595 Mbps
+2024-11-14 02:55:22,278 [ForkPoolWorker-4] Bandwidth cleared for k8s-worker-4
+2024-11-14 02:55:22,278 [ForkPoolWorker-4] Setting bandwidth between k8s-worker-4 and k8s-worker-1: 215 Mbps
+2024-11-14 02:55:22,294 [ForkPoolWorker-7] Bandwidth cleared for k8s-worker-7
+2024-11-14 02:55:22,294 [ForkPoolWorker-7] Setting bandwidth between k8s-worker-7 and k8s-worker-1: 628 Mbps
+2024-11-14 02:55:22,307 [ForkPoolWorker-2] Bandwidth cleared for k8s-worker-2
+2024-11-14 02:55:22,308 [ForkPoolWorker-2] Setting bandwidth between k8s-worker-2 and k8s-worker-1: 730 Mbps
+2024-11-14 02:55:22,309 [ForkPoolWorker-8] Bandwidth set between k8s-worker-8 and k8s-worker-1: 592 Mbps
+2024-11-14 02:55:22,327 [ForkPoolWorker-9] Bandwidth cleared for k8s-worker-9
+2024-11-14 02:55:22,328 [ForkPoolWorker-9] Setting bandwidth between k8s-worker-9 and k8s-worker-1: 766 Mbps
+2024-11-14 02:55:22,352 [ForkPoolWorker-3] Bandwidth set between k8s-worker-3 and k8s-worker-1: 462 Mbps
+2024-11-14 02:55:22,372 [ForkPoolWorker-5] Bandwidth set between k8s-worker-5 and k8s-worker-1: 682 Mbps
+2024-11-14 02:55:22,381 [ForkPoolWorker-1] Bandwidth set between k8s-worker-1 and k8s-worker-2: 595 Mbps
+2024-11-14 02:55:22,386 [ForkPoolWorker-4] Bandwidth set between k8s-worker-4 and k8s-worker-1: 215 Mbps
+2024-11-14 02:55:22,409 [ForkPoolWorker-8] Setting bandwidth between k8s-worker-8 and k8s-worker-2: 241 Mbps
+2024-11-14 02:55:22,410 [ForkPoolWorker-7] Bandwidth set between k8s-worker-7 and k8s-worker-1: 628 Mbps
+2024-11-14 02:55:22,419 [ForkPoolWorker-8] Bandwidth set between k8s-worker-8 and k8s-worker-2: 241 Mbps
+2024-11-14 02:55:22,419 [ForkPoolWorker-2] Bandwidth set between k8s-worker-2 and k8s-worker-1: 730 Mbps
+2024-11-14 02:55:22,435 [ForkPoolWorker-9] Bandwidth set between k8s-worker-9 and k8s-worker-1: 766 Mbps
+2024-11-14 02:55:22,452 [ForkPoolWorker-3] Setting bandwidth between k8s-worker-3 and k8s-worker-2: 769 Mbps
+2024-11-14 02:55:22,452 [ForkPoolWorker-6] Bandwidth cleared for k8s-worker-6
+2024-11-14 02:55:22,453 [ForkPoolWorker-6] Setting bandwidth between k8s-worker-6 and k8s-worker-1: 302 Mbps
+2024-11-14 02:55:22,466 [ForkPoolWorker-3] Bandwidth set between k8s-worker-3 and k8s-worker-2: 769 Mbps
+2024-11-14 02:55:22,472 [ForkPoolWorker-5] Setting bandwidth between k8s-worker-5 and k8s-worker-2: 599 Mbps
+2024-11-14 02:55:22,481 [ForkPoolWorker-1] Setting bandwidth between k8s-worker-1 and k8s-worker-3: 553 Mbps
+2024-11-14 02:55:22,486 [ForkPoolWorker-5] Bandwidth set between k8s-worker-5 and k8s-worker-2: 599 Mbps
+2024-11-14 02:55:22,486 [ForkPoolWorker-4] Setting bandwidth between k8s-worker-4 and k8s-worker-2: 201 Mbps
+2024-11-14 02:55:22,495 [ForkPoolWorker-1] Bandwidth set between k8s-worker-1 and k8s-worker-3: 553 Mbps
+2024-11-14 02:55:22,499 [ForkPoolWorker-4] Bandwidth set between k8s-worker-4 and k8s-worker-2: 201 Mbps
+2024-11-14 02:55:22,511 [ForkPoolWorker-7] Setting bandwidth between k8s-worker-7 and k8s-worker-2: 217 Mbps
+2024-11-14 02:55:22,520 [ForkPoolWorker-8] Setting bandwidth between k8s-worker-8 and k8s-worker-3: 405 Mbps
+2024-11-14 02:55:22,520 [ForkPoolWorker-2] Setting bandwidth between k8s-worker-2 and k8s-worker-3: 602 Mbps
+2024-11-14 02:55:22,525 [ForkPoolWorker-7] Bandwidth set between k8s-worker-7 and k8s-worker-2: 217 Mbps
+2024-11-14 02:55:22,531 [ForkPoolWorker-8] Bandwidth set between k8s-worker-8 and k8s-worker-3: 405 Mbps
+2024-11-14 02:55:22,536 [ForkPoolWorker-9] Setting bandwidth between k8s-worker-9 and k8s-worker-2: 343 Mbps
+2024-11-14 02:55:22,536 [ForkPoolWorker-2] Bandwidth set between k8s-worker-2 and k8s-worker-3: 602 Mbps
+2024-11-14 02:55:22,548 [ForkPoolWorker-9] Bandwidth set between k8s-worker-9 and k8s-worker-2: 343 Mbps
+2024-11-14 02:55:22,565 [ForkPoolWorker-6] Bandwidth set between k8s-worker-6 and k8s-worker-1: 302 Mbps
+2024-11-14 02:55:22,566 [ForkPoolWorker-3] Setting bandwidth between k8s-worker-3 and k8s-worker-4: 200 Mbps
+2024-11-14 02:55:22,579 [ForkPoolWorker-3] Bandwidth set between k8s-worker-3 and k8s-worker-4: 200 Mbps
+2024-11-14 02:55:22,586 [ForkPoolWorker-5] Setting bandwidth between k8s-worker-5 and k8s-worker-3: 289 Mbps
+2024-11-14 02:55:22,595 [ForkPoolWorker-1] Setting bandwidth between k8s-worker-1 and k8s-worker-4: 791 Mbps
+2024-11-14 02:55:22,600 [ForkPoolWorker-5] Bandwidth set between k8s-worker-5 and k8s-worker-3: 289 Mbps
+2024-11-14 02:55:22,600 [ForkPoolWorker-4] Setting bandwidth between k8s-worker-4 and k8s-worker-3: 451 Mbps
+2024-11-14 02:55:22,609 [ForkPoolWorker-1] Bandwidth set between k8s-worker-1 and k8s-worker-4: 791 Mbps
+2024-11-14 02:55:22,613 [ForkPoolWorker-4] Bandwidth set between k8s-worker-4 and k8s-worker-3: 451 Mbps
+2024-11-14 02:55:22,625 [ForkPoolWorker-7] Setting bandwidth between k8s-worker-7 and k8s-worker-3: 600 Mbps
+2024-11-14 02:55:22,631 [ForkPoolWorker-8] Setting bandwidth between k8s-worker-8 and k8s-worker-4: 773 Mbps
+2024-11-14 02:55:22,636 [ForkPoolWorker-2] Setting bandwidth between k8s-worker-2 and k8s-worker-4: 433 Mbps
+2024-11-14 02:55:22,640 [ForkPoolWorker-7] Bandwidth set between k8s-worker-7 and k8s-worker-3: 600 Mbps
+2024-11-14 02:55:22,641 [ForkPoolWorker-8] Bandwidth set between k8s-worker-8 and k8s-worker-4: 773 Mbps
+2024-11-14 02:55:22,648 [ForkPoolWorker-9] Setting bandwidth between k8s-worker-9 and k8s-worker-3: 546 Mbps
+2024-11-14 02:55:22,650 [ForkPoolWorker-2] Bandwidth set between k8s-worker-2 and k8s-worker-4: 433 Mbps
+2024-11-14 02:55:22,665 [ForkPoolWorker-6] Setting bandwidth between k8s-worker-6 and k8s-worker-2: 422 Mbps
+2024-11-14 02:55:22,676 [ForkPoolWorker-6] Bandwidth set between k8s-worker-6 and k8s-worker-2: 422 Mbps
+2024-11-14 02:55:22,679 [ForkPoolWorker-3] Setting bandwidth between k8s-worker-3 and k8s-worker-5: 669 Mbps
+2024-11-14 02:55:22,693 [ForkPoolWorker-3] Bandwidth set between k8s-worker-3 and k8s-worker-5: 669 Mbps
+2024-11-14 02:55:22,700 [ForkPoolWorker-5] Setting bandwidth between k8s-worker-5 and k8s-worker-4: 349 Mbps
+2024-11-14 02:55:22,708 [ForkPoolWorker-9] Bandwidth set between k8s-worker-9 and k8s-worker-3: 546 Mbps
+2024-11-14 02:55:22,709 [ForkPoolWorker-1] Setting bandwidth between k8s-worker-1 and k8s-worker-5: 302 Mbps
+2024-11-14 02:55:22,713 [ForkPoolWorker-4] Setting bandwidth between k8s-worker-4 and k8s-worker-5: 439 Mbps
+2024-11-14 02:55:22,713 [ForkPoolWorker-5] Bandwidth set between k8s-worker-5 and k8s-worker-4: 349 Mbps
+2024-11-14 02:55:22,721 [ForkPoolWorker-1] Bandwidth set between k8s-worker-1 and k8s-worker-5: 302 Mbps
+2024-11-14 02:55:22,722 [ForkPoolWorker-4] Bandwidth set between k8s-worker-4 and k8s-worker-5: 439 Mbps
+2024-11-14 02:55:22,740 [ForkPoolWorker-7] Setting bandwidth between k8s-worker-7 and k8s-worker-4: 341 Mbps
+2024-11-14 02:55:22,741 [ForkPoolWorker-8] Setting bandwidth between k8s-worker-8 and k8s-worker-5: 734 Mbps
+2024-11-14 02:55:22,750 [ForkPoolWorker-2] Setting bandwidth between k8s-worker-2 and k8s-worker-5: 584 Mbps
+2024-11-14 02:55:22,752 [ForkPoolWorker-8] Bandwidth set between k8s-worker-8 and k8s-worker-5: 734 Mbps
+2024-11-14 02:55:22,755 [ForkPoolWorker-7] Bandwidth set between k8s-worker-7 and k8s-worker-4: 341 Mbps
+2024-11-14 02:55:22,764 [ForkPoolWorker-2] Bandwidth set between k8s-worker-2 and k8s-worker-5: 584 Mbps
+2024-11-14 02:55:22,776 [ForkPoolWorker-6] Setting bandwidth between k8s-worker-6 and k8s-worker-3: 797 Mbps
+2024-11-14 02:55:22,792 [ForkPoolWorker-6] Bandwidth set between k8s-worker-6 and k8s-worker-3: 797 Mbps
+2024-11-14 02:55:22,793 [ForkPoolWorker-3] Setting bandwidth between k8s-worker-3 and k8s-worker-6: 216 Mbps
+2024-11-14 02:55:22,808 [ForkPoolWorker-3] Bandwidth set between k8s-worker-3 and k8s-worker-6: 216 Mbps
+2024-11-14 02:55:22,808 [ForkPoolWorker-9] Setting bandwidth between k8s-worker-9 and k8s-worker-4: 480 Mbps
+2024-11-14 02:55:22,814 [ForkPoolWorker-5] Setting bandwidth between k8s-worker-5 and k8s-worker-6: 349 Mbps
+2024-11-14 02:55:22,819 [ForkPoolWorker-9] Bandwidth set between k8s-worker-9 and k8s-worker-4: 480 Mbps
+2024-11-14 02:55:22,821 [ForkPoolWorker-1] Setting bandwidth between k8s-worker-1 and k8s-worker-6: 597 Mbps
+2024-11-14 02:55:22,823 [ForkPoolWorker-4] Setting bandwidth between k8s-worker-4 and k8s-worker-6: 430 Mbps
+2024-11-14 02:55:22,829 [ForkPoolWorker-5] Bandwidth set between k8s-worker-5 and k8s-worker-6: 349 Mbps
+2024-11-14 02:55:22,833 [ForkPoolWorker-4] Bandwidth set between k8s-worker-4 and k8s-worker-6: 430 Mbps
+2024-11-14 02:55:22,834 [ForkPoolWorker-1] Bandwidth set between k8s-worker-1 and k8s-worker-6: 597 Mbps
+2024-11-14 02:55:22,852 [ForkPoolWorker-8] Setting bandwidth between k8s-worker-8 and k8s-worker-6: 373 Mbps
+2024-11-14 02:55:22,855 [ForkPoolWorker-7] Setting bandwidth between k8s-worker-7 and k8s-worker-5: 506 Mbps
+2024-11-14 02:55:22,862 [ForkPoolWorker-8] Bandwidth set between k8s-worker-8 and k8s-worker-6: 373 Mbps
+2024-11-14 02:55:22,864 [ForkPoolWorker-2] Setting bandwidth between k8s-worker-2 and k8s-worker-6: 633 Mbps
+2024-11-14 02:55:22,867 [ForkPoolWorker-7] Bandwidth set between k8s-worker-7 and k8s-worker-5: 506 Mbps
+2024-11-14 02:55:22,876 [ForkPoolWorker-2] Bandwidth set between k8s-worker-2 and k8s-worker-6: 633 Mbps
+2024-11-14 02:55:22,892 [ForkPoolWorker-6] Setting bandwidth between k8s-worker-6 and k8s-worker-4: 207 Mbps
+2024-11-14 02:55:22,908 [ForkPoolWorker-6] Bandwidth set between k8s-worker-6 and k8s-worker-4: 207 Mbps
+2024-11-14 02:55:22,908 [ForkPoolWorker-3] Setting bandwidth between k8s-worker-3 and k8s-worker-7: 488 Mbps
+2024-11-14 02:55:22,919 [ForkPoolWorker-9] Setting bandwidth between k8s-worker-9 and k8s-worker-5: 342 Mbps
+2024-11-14 02:55:22,922 [ForkPoolWorker-3] Bandwidth set between k8s-worker-3 and k8s-worker-7: 488 Mbps
+2024-11-14 02:55:22,929 [ForkPoolWorker-5] Setting bandwidth between k8s-worker-5 and k8s-worker-7: 766 Mbps
+2024-11-14 02:55:22,934 [ForkPoolWorker-9] Bandwidth set between k8s-worker-9 and k8s-worker-5: 342 Mbps
+2024-11-14 02:55:22,934 [ForkPoolWorker-4] Setting bandwidth between k8s-worker-4 and k8s-worker-7: 473 Mbps
+2024-11-14 02:55:22,934 [ForkPoolWorker-1] Setting bandwidth between k8s-worker-1 and k8s-worker-7: 759 Mbps
+2024-11-14 02:55:22,944 [ForkPoolWorker-4] Bandwidth set between k8s-worker-4 and k8s-worker-7: 473 Mbps
+2024-11-14 02:55:22,945 [ForkPoolWorker-5] Bandwidth set between k8s-worker-5 and k8s-worker-7: 766 Mbps
+2024-11-14 02:55:22,946 [ForkPoolWorker-1] Bandwidth set between k8s-worker-1 and k8s-worker-7: 759 Mbps
+2024-11-14 02:55:22,962 [ForkPoolWorker-8] Setting bandwidth between k8s-worker-8 and k8s-worker-7: 540 Mbps
+2024-11-14 02:55:22,967 [ForkPoolWorker-7] Setting bandwidth between k8s-worker-7 and k8s-worker-6: 696 Mbps
+2024-11-14 02:55:22,971 [ForkPoolWorker-8] Bandwidth set between k8s-worker-8 and k8s-worker-7: 540 Mbps
+2024-11-14 02:55:22,976 [ForkPoolWorker-2] Setting bandwidth between k8s-worker-2 and k8s-worker-7: 725 Mbps
+2024-11-14 02:55:22,980 [ForkPoolWorker-7] Bandwidth set between k8s-worker-7 and k8s-worker-6: 696 Mbps
+2024-11-14 02:55:22,990 [ForkPoolWorker-2] Bandwidth set between k8s-worker-2 and k8s-worker-7: 725 Mbps
+2024-11-14 02:55:23,008 [ForkPoolWorker-6] Setting bandwidth between k8s-worker-6 and k8s-worker-5: 513 Mbps
+2024-11-14 02:55:23,022 [ForkPoolWorker-3] Setting bandwidth between k8s-worker-3 and k8s-worker-8: 214 Mbps
+2024-11-14 02:55:23,023 [ForkPoolWorker-6] Bandwidth set between k8s-worker-6 and k8s-worker-5: 513 Mbps
+2024-11-14 02:55:23,034 [ForkPoolWorker-9] Setting bandwidth between k8s-worker-9 and k8s-worker-6: 678 Mbps
+2024-11-14 02:55:23,036 [ForkPoolWorker-3] Bandwidth set between k8s-worker-3 and k8s-worker-8: 214 Mbps
+2024-11-14 02:55:23,045 [ForkPoolWorker-4] Setting bandwidth between k8s-worker-4 and k8s-worker-8: 742 Mbps
+2024-11-14 02:55:23,045 [ForkPoolWorker-5] Setting bandwidth between k8s-worker-5 and k8s-worker-8: 524 Mbps
+2024-11-14 02:55:23,045 [ForkPoolWorker-9] Bandwidth set between k8s-worker-9 and k8s-worker-6: 678 Mbps
+2024-11-14 02:55:23,047 [ForkPoolWorker-1] Setting bandwidth between k8s-worker-1 and k8s-worker-8: 604 Mbps
+2024-11-14 02:55:23,059 [ForkPoolWorker-4] Bandwidth set between k8s-worker-4 and k8s-worker-8: 742 Mbps
+2024-11-14 02:55:23,060 [ForkPoolWorker-5] Bandwidth set between k8s-worker-5 and k8s-worker-8: 524 Mbps
+2024-11-14 02:55:23,062 [ForkPoolWorker-1] Bandwidth set between k8s-worker-1 and k8s-worker-8: 604 Mbps
+2024-11-14 02:55:23,072 [ForkPoolWorker-8] Setting bandwidth between k8s-worker-8 and k8s-worker-9: 306 Mbps
+2024-11-14 02:55:23,081 [ForkPoolWorker-7] Setting bandwidth between k8s-worker-7 and k8s-worker-8: 774 Mbps
+2024-11-14 02:55:23,084 [ForkPoolWorker-8] Bandwidth set between k8s-worker-8 and k8s-worker-9: 306 Mbps
+2024-11-14 02:55:23,090 [ForkPoolWorker-2] Setting bandwidth between k8s-worker-2 and k8s-worker-8: 225 Mbps
+2024-11-14 02:55:23,094 [ForkPoolWorker-7] Bandwidth set between k8s-worker-7 and k8s-worker-8: 774 Mbps
+2024-11-14 02:55:23,102 [ForkPoolWorker-2] Bandwidth set between k8s-worker-2 and k8s-worker-8: 225 Mbps
+2024-11-14 02:55:23,124 [ForkPoolWorker-6] Setting bandwidth between k8s-worker-6 and k8s-worker-7: 728 Mbps
+2024-11-14 02:55:23,136 [ForkPoolWorker-3] Setting bandwidth between k8s-worker-3 and k8s-worker-9: 291 Mbps
+2024-11-14 02:55:23,139 [ForkPoolWorker-6] Bandwidth set between k8s-worker-6 and k8s-worker-7: 728 Mbps
+2024-11-14 02:55:23,146 [ForkPoolWorker-9] Setting bandwidth between k8s-worker-9 and k8s-worker-7: 244 Mbps
+2024-11-14 02:55:23,147 [ForkPoolWorker-3] Bandwidth set between k8s-worker-3 and k8s-worker-9: 291 Mbps
+2024-11-14 02:55:23,158 [ForkPoolWorker-9] Bandwidth set between k8s-worker-9 and k8s-worker-7: 244 Mbps
+2024-11-14 02:55:23,159 [ForkPoolWorker-4] Setting bandwidth between k8s-worker-4 and k8s-worker-9: 241 Mbps
+2024-11-14 02:55:23,160 [ForkPoolWorker-5] Setting bandwidth between k8s-worker-5 and k8s-worker-9: 292 Mbps
+2024-11-14 02:55:23,162 [ForkPoolWorker-1] Setting bandwidth between k8s-worker-1 and k8s-worker-9: 759 Mbps
+2024-11-14 02:55:23,171 [ForkPoolWorker-4] Bandwidth set between k8s-worker-4 and k8s-worker-9: 241 Mbps
+2024-11-14 02:55:23,174 [ForkPoolWorker-5] Bandwidth set between k8s-worker-5 and k8s-worker-9: 292 Mbps
+2024-11-14 02:55:23,178 [ForkPoolWorker-1] Bandwidth set between k8s-worker-1 and k8s-worker-9: 759 Mbps
+2024-11-14 02:55:23,194 [ForkPoolWorker-7] Setting bandwidth between k8s-worker-7 and k8s-worker-9: 609 Mbps
+2024-11-14 02:55:23,202 [ForkPoolWorker-2] Setting bandwidth between k8s-worker-2 and k8s-worker-9: 672 Mbps
+2024-11-14 02:55:23,211 [ForkPoolWorker-7] Bandwidth set between k8s-worker-7 and k8s-worker-9: 609 Mbps
+2024-11-14 02:55:23,215 [ForkPoolWorker-2] Bandwidth set between k8s-worker-2 and k8s-worker-9: 672 Mbps
+2024-11-14 02:55:23,240 [ForkPoolWorker-6] Setting bandwidth between k8s-worker-6 and k8s-worker-8: 538 Mbps
+2024-11-14 02:55:23,253 [ForkPoolWorker-6] Bandwidth set between k8s-worker-6 and k8s-worker-8: 538 Mbps
+2024-11-14 02:55:23,258 [ForkPoolWorker-9] Setting bandwidth between k8s-worker-9 and k8s-worker-8: 352 Mbps
+2024-11-14 02:55:23,312 [ForkPoolWorker-9] Bandwidth set between k8s-worker-9 and k8s-worker-8: 352 Mbps
+2024-11-14 02:55:23,353 [ForkPoolWorker-6] Setting bandwidth between k8s-worker-6 and k8s-worker-9: 543 Mbps
+2024-11-14 02:55:23,365 [ForkPoolWorker-6] Bandwidth set between k8s-worker-6 and k8s-worker-9: 543 Mbps
