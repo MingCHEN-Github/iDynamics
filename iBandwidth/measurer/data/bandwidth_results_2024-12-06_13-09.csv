@@ -1,0 +1,10 @@
+,k8s-worker-1,k8s-worker-9,k8s-worker-5,k8s-worker-8,k8s-worker-6,k8s-worker-2,k8s-worker-4,k8s-worker-7,k8s-worker-3
+k8s-worker-3,685 Mbits/sec,711 Mbits/sec,305 Mbits/sec,245 Mbits/sec,439 Mbits/sec,507 Mbits/sec,485 Mbits/sec,342 Mbits/sec,0
+k8s-worker-1,0,667 Mbits/sec,359 Mbits/sec,754 Mbits/sec,560 Mbits/sec,608 Mbits/sec,452 Mbits/sec,300 Mbits/sec,665 Mbits/sec
+k8s-worker-8,330 Mbits/sec,411 Mbits/sec,434 Mbits/sec,0,675 Mbits/sec,336 Mbits/sec,548 Mbits/sec,528 Mbits/sec,442 Mbits/sec
+k8s-worker-5,376 Mbits/sec,582 Mbits/sec,0,484 Mbits/sec,302 Mbits/sec,397 Mbits/sec,606 Mbits/sec,492 Mbits/sec,467 Mbits/sec
+k8s-worker-9,619 Mbits/sec,0,389 Mbits/sec,576 Mbits/sec,710 Mbits/sec,389 Mbits/sec,562 Mbits/sec,736 Mbits/sec,362 Mbits/sec
+k8s-worker-6,679 Mbits/sec,553 Mbits/sec,500 Mbits/sec,243 Mbits/sec,0,565 Mbits/sec,232 Mbits/sec,422 Mbits/sec,269 Mbits/sec
+k8s-worker-2,267 Mbits/sec,406 Mbits/sec,446 Mbits/sec,620 Mbits/sec,419 Mbits/sec,0,294 Mbits/sec,274 Mbits/sec,517 Mbits/sec
+k8s-worker-7,569 Mbits/sec,722 Mbits/sec,589 Mbits/sec,466 Mbits/sec,221 Mbits/sec,477 Mbits/sec,545 Mbits/sec,0,259 Mbits/sec
+k8s-worker-4,434 Mbits/sec,253 Mbits/sec,682 Mbits/sec,598 Mbits/sec,242 Mbits/sec,769 Mbits/sec,0,449 Mbits/sec,206 Mbits/sec
