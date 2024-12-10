@@ -49,7 +49,13 @@ def apply_latency_between_nodes(source_node_name, username, key_path, interface,
         # Clear existing rules:
         client.exec_command(f"sudo tc qdisc del dev {interface} root")
         
-        client.exec_command(f"sudo tc qdisc add dev {interface} root handle 1: htb default 1")
+        # set the default class as 1:1 ("1:" is the root handel, "1" is the class identifier)
+        client.exec_command(f"sudo tc qdisc add dev {interface} root handle 1: htb default 1") 
+        '''
+        Not strictyly necessary to set rate limit for default class qdisc, 
+        but it is a common practice to deifne a class with specific parameters to
+        control the rate and behavior of the traffic that does not match any of the filters
+        '''
         client.exec_command(f"sudo tc class add dev {interface} parent 1: classid 1:1 htb rate 100mbps")
         
         mark_count = 2  # Start from 2 to reserve 1:1 as the default class
@@ -62,8 +68,13 @@ def apply_latency_between_nodes(source_node_name, username, key_path, interface,
             latency = delay_matrix[source_node_index][dst_node_index]
             print(dst_node_ip)
             
-            command_class_add = f"sudo tc class add dev {interface} parent 1: classid 1:{mark_count} htb rate 100mbps"
-            command_delay_add = f"sudo tc qdisc add dev {interface} parent 1:{mark_count} handle {mark_count}0: netem delay {latency}ms"
+            command_class_add = f"sudo tc class add dev {interface} parent 1: classid 1:{mark_count} htb rate 100mbps" 
+            '''
+            The 0 in handle {mark_count}0 is used to create a unique and structured identifier for the qdisc handle. 
+            This helps ensure that the handle is unique within the traffic control configuration and maintains a clear hierarchy,
+            making the configuration easier to manage and understand.
+            '''
+            command_delay_add = f"sudo tc qdisc add dev {interface} parent 1:{mark_count} handle {mark_count}0: netem delay {latency}ms" # can be easily changed to add loss,jitter, etc
             command_filter_add = f"sudo tc filter add dev {interface} protocol ip parent 1:0 prio 1 u32 match ip dst {dst_node_ip} flowid 1:{mark_count}"
             
             client.exec_command(command_class_add)

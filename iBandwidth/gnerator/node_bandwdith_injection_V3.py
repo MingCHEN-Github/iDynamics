@@ -62,6 +62,13 @@ def apply_bandwidth_between_nodes(source_node_name, username, key_path, interfac
             bandwidth = bandwidth_matrix[source_index][dst_index]
 
             # Assign unique class ID for each destination
+            '''
+            The class_id is constructed to be unique for each destination node by using dst_index + 1. 
+            This ensures that each traffic class has a unique identifier. 
+            In contrast (node_delay_injection_V3.py), the handle {mark_count}0 is used to create a unique identifier for qdiscs by appending 0 
+            to ensure uniqueness within the traffic control configuration. 
+            The different contexts and requirements for uniqueness explain why class_id does not need to append 0.
+            '''
             class_id = f"1:{dst_index + 1}"  # Unique class ID
             logging.info(f'Setting bandwidth between {source_node_name} and {dst_node}: {bandwidth} Mbps')
 
