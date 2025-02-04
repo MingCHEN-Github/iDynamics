@@ -24,7 +24,7 @@ $ helm upgrade social-net3 ./socialnetwork \\ \
 --set global.resources.requests.memory=64Mi \\ \
 --set global.resources.requests.cpu=100m \\ \
 --set global.resources.limits.memory=128Mi \\ \
---set global.resources.limits.cpu=200m \\ \
+--set global.resources.limits.cpu=200m 
 
 > **global and sepcific resource upgrade**:\
 $ helm upgrade social-net3 ./socialnetwork \\ \
