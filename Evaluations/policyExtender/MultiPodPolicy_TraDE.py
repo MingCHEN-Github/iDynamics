@@ -78,7 +78,7 @@ class TraDE_Policy(AbstractSchedulingPolicy):
 
     #### Below are internal stubs referencing your original code approach
 
-    def _build_exec_graph_stub(self, pods: List[PodInfo]):
+    def _build_exec_graph_stub(self, pods: list[PodInfo]):
         """
         In the real version, you'd replicate the logic from build_exec_graph:
           1. For each pair of deployments, call 'transmitted_req_calculator' or equivalent
@@ -88,7 +88,7 @@ class TraDE_Policy(AbstractSchedulingPolicy):
         n = len(pods)
         return [[0]*n for _ in range(n)]
 
-    def _build_delay_matrix_stub(self, candidate_nodes: List[NodeInfo]):
+    def _build_delay_matrix_stub(self, candidate_nodes: list[NodeInfo]):
         """
         For each pair of candidate nodes, figure out the network delay or cost.
         In your code, you used measure_http_latency, etc. 

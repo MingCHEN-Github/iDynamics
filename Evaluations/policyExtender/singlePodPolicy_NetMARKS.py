@@ -63,7 +63,7 @@ class NetMARKS_Policy(AbstractSchedulingPolicy):
             results.append(decision)
         return results
 
-    def on_update_metrics(self, nodes: List[NodeInfo]) -> None:
+    def on_update_metrics(self, nodes: list[NodeInfo]) -> None:
         """
         If you want to do anything special when metrics change, do it here.
         For instance, read new usage data from Prom. 
