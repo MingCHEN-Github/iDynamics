@@ -32,7 +32,7 @@ class AbstractSchedulingPolicy(ABC):
         Load the Prometheus URL, or set up connections or configuration objects if needed.
         
     
-        Called once when the policy is created.
+        Called once when the policy is created.# load
         """
         pass
 
@@ -48,7 +48,7 @@ class AbstractSchedulingPolicy(ABC):
     @abstractmethod
     def schedule_all(self, pods: List[PodInfo], candidate_nodes: List[NodeInfo]) -> List[SchedulingDecision]:
         """
-        Batch or multi-service scheduling. (eg., TraDE)
+       #  Batch or multi-service scheduling. (eg., TraDE)
         
         *Optional extension.* Return scheduling decisions for a batch of Pods simultaneously.
         This is useful for multi-service or multi-pod optimization.

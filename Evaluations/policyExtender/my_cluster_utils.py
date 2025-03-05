@@ -2,9 +2,11 @@
 
 from ast import Tuple
 import os
+# from tkinter.font import names
 from kubernetes import client, config
 from typing import List
 from my_policy_interface import NodeInfo, PodInfo
+from node_delay_measure_Parallel import measure_http_latency
 
 class NodeInfo:
     """
@@ -76,6 +78,7 @@ def gather_all_pods(namespace: str = None) -> List[client.V1Pod]:
         raw_pods = v1.list_pod_for_all_namespaces().items
     return raw_pods
 
+
 def build_nodeinfo_objects(raw_nodes: List[client.V1Node]) -> List[NodeInfo]:
     """
     Convert raw Node objects to NodeInfo. You can adapt resource usage logic
@@ -95,7 +98,7 @@ def build_nodeinfo_objects(raw_nodes: List[client.V1Node]) -> List[NodeInfo]:
     # If you want to incorporate usage from metrics, see note below.
     for node in raw_nodes:
         node_name = node.metadata.name
-        print(f"node_name: {node_name}")
+        # print(f"node_name: {node_name}")
         
         # Example: parse CPU capacity in cores (converting from millicores if needed)
         # Node capacity might be 'cpu': '4', or '4000m' => 4 cores
@@ -118,6 +121,10 @@ def build_nodeinfo_objects(raw_nodes: List[client.V1Node]) -> List[NodeInfo]:
         # for easier calculation, make the cpu_usage and mem_usage as float with two decimal points
         current_cpu_usage = math.ceil(current_cpu_usage * 100) / 100
         current_mem_usage = math.ceil(current_mem_usage * 100) / 100
+        
+        # get the network latency and bandwidth
+        latency_results = measure_http_latency(namespace='measure-nodes')
+        _network_latency_ = get_latency_to_other_nodes(latency_results, node_name)
 
         # Build the NodeInfo object
         node_info = NodeInfo(
@@ -126,7 +133,7 @@ def build_nodeinfo_objects(raw_nodes: List[client.V1Node]) -> List[NodeInfo]:
             mem_capacity=mem_capacity,
             current_cpu_usage=current_cpu_usage,
             current_mem_usage=current_mem_usage,
-            network_latency={},     # Populate later if you have latency data
+            network_latency=_network_latency_,     # Populate later if you have latency data
             network_bandwidth={}    # Populate later if you have bandwidth data
         )
         nodeinfo_list.append(node_info)
@@ -270,6 +277,33 @@ def fetch_live_node_usage_prometheus(node_name: str,
 # print(f"Node {node_name} => CPU usage: {cpu_usage:.2f} cores, Memory usage: {mem_usage:.1f} MiB")
 
 
+def get_latency_to_other_nodes(latency_results: dict, source_node_name: str) -> dict:
+    
+    """
+    Given a dictionary containing latency measurements between nodes,
+    and a source node name, return a dictionary of the latencies from
+    the source node to other nodes.
+
+    :param latency_results: A nested dictionary mapping:
+                           { source_node: { destination_node: latency_value, ... }, ... }
+    this parameter is the result of the function "measure_http_latency(namespace='measure-nodes')"
+    
+    :param source_node_name: The name of the node from which latencies to other nodes are requested.
+    :return: A dictionary of { destination_node: latency_value } for the specified source node.
+             Excludes the source node itself.
+    """
+    # Retrieve the dictionary of latencies for the source node (or an empty dict if not found)
+    source_latencies = latency_results.get(source_node_name, {})
+
+    # Filter out the entry for the source node itself
+    return {
+        dst_node: latency
+        for dst_node, latency in source_latencies.items()
+        if dst_node != source_node_name
+    }
+
+
+
 # ---------------------------------------------------------------------
 # Helper functions
 # ---------------------------------------------------------------------
@@ -406,3 +440,5 @@ def find_prometheus_url_in_all_namespaces():
 #     print(f"Prometheus URL found: {url}")
 # else:
 #     print("No Prometheus service found in any namespace.")
+results = measure_http_latency(namespace='measure-nodes')
+print(results)
