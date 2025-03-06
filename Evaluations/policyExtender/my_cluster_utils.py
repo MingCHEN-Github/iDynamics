@@ -6,7 +6,8 @@ import os
 from kubernetes import client, config
 from typing import List
 from my_policy_interface import NodeInfo, PodInfo
-from node_delay_measure_Parallel import measure_http_latency
+from node_delay_measure_ParallelComp import measure_http_latency
+from node_bandwidth_measure_ParallelComp import measure_bandwidth
 
 class NodeInfo:
     """
@@ -122,9 +123,22 @@ def build_nodeinfo_objects(raw_nodes: List[client.V1Node]) -> List[NodeInfo]:
         current_cpu_usage = math.ceil(current_cpu_usage * 100) / 100
         current_mem_usage = math.ceil(current_mem_usage * 100) / 100
         
-        # get the network latency and bandwidth
-        latency_results = measure_http_latency(namespace='measure-nodes')
-        _network_latency_ = get_latency_to_other_nodes(latency_results, node_name)
+        # Get the network latency and bandwidth
+        # (1) On-time method, which is more real-time but a bit time-consuming for measuing Bnadiwth
+        # latency_results = measure_http_latency(namespace='measure-nodes')
+        # bandwidth_results = measure_bandwidth(namespace='measure-nodes-bd', max_concurrent_tasks=3, test_duration=5) # concurrency can be changed as needed
+        # _network_latency_ = get_latency_to_other_nodes(latency_results, node_name)
+        # _network_bandwidth_ = get_bandwidth_to_other_nodes(bandwidth_results, node_name)
+        
+        # (2) Off-time method, which is less real-time but faster for measuring Bandwidth
+        # the latency and bandwidyh data can be updated from periodcally running the above On-time methods,
+        # or the update data when detecting major changes in network conditions 
+        # (e.g., via metrics, alerts, or cluster events), trigger a new measurement pass 
+        latency_dict_path= "/home/ubuntu/iDynamics/Evaluations/policyExtender/networking_measured_data/latency_dict.txt"
+        bandwidth_dict_path= "/home/ubuntu/iDynamics/Evaluations/policyExtender/networking_measured_data/bandwidth_dict.txt"
+        _network_latency_ = get_networking_conditions_for_node(node_name, latency_dict_path)
+        _network_bandwidth_ = get_networking_conditions_for_node(node_name, bandwidth_dict_path)
+        
 
         # Build the NodeInfo object
         node_info = NodeInfo(
@@ -134,7 +148,7 @@ def build_nodeinfo_objects(raw_nodes: List[client.V1Node]) -> List[NodeInfo]:
             current_cpu_usage=current_cpu_usage,
             current_mem_usage=current_mem_usage,
             network_latency=_network_latency_,     # Populate later if you have latency data
-            network_bandwidth={}    # Populate later if you have bandwidth data
+            network_bandwidth=_network_bandwidth_    # Populate later if you have bandwidth data
         )
         nodeinfo_list.append(node_info)
 
@@ -276,8 +290,34 @@ def fetch_live_node_usage_prometheus(node_name: str,
 # cpu_usage, mem_usage = fetch_live_node_usage_prometheus(node_name, prom_url=prom_url)
 # print(f"Node {node_name} => CPU usage: {cpu_usage:.2f} cores, Memory usage: {mem_usage:.1f} MiB")
 
+import ast
+def get_networking_conditions_for_node(source_node_name:str, file_path:str) -> dict:
+    # Off-time method, get the latency and bandwidth data for a specific node by reading from the text file path
+    """
+    Returns the latency or bandwidth data for a specific node by reading from the text file path.
+    for example: 
+    latency_dict_path= "/home/ubuntu/iDynamics/Evaluations/policyExtender/networking_measured_data/latency_dict.txt"
+    bandwidth_dict_path= "/home/ubuntu/iDynamics/Evaluations/policyExtender/networking_measured_data/bandwidth_dict.txt"
+    
+    If the node is not found, returns an empty dict.
+
+    Reads the latency data from a text file and returns it as a Python dictionary.
+    """
+    with open(file_path, "r") as f:
+        file_contents = f.read()
+    # Convert the Python literal string into a dictionary
+    result_dict = ast.literal_eval(file_contents)
+    source_result = result_dict.get(source_node_name, {})
+    return {
+        dst_node: latency
+        for dst_node, latency in source_result.items()
+        if dst_node != source_node_name
+    }
+
+
 
 def get_latency_to_other_nodes(latency_results: dict, source_node_name: str) -> dict:
+    # On-time method, get the latency data for a specific node from the latency_results dictionary
     
     """
     Given a dictionary containing latency measurements between nodes,
@@ -301,6 +341,45 @@ def get_latency_to_other_nodes(latency_results: dict, source_node_name: str) -> 
         for dst_node, latency in source_latencies.items()
         if dst_node != source_node_name
     }
+
+def get_bandwidth_to_other_nodes(bandwidth_results: dict, source_node_name: str) -> dict:
+    # On-time method, get the bandwidth data for a specific node from the bandwidth_results dictionary
+    """
+    Given a dictionary that maps each node to a dictionary of 
+    {destination_node: "X Mbits/sec"}, this function returns 
+    the bandwidth from 'source_node_name' to each other node.
+
+    :param bandwidth_results: Nested dictionary of bandwidths.
+        Example:
+        {
+            'k8s-worker-1': {
+                'k8s-worker-2': '123 Mbits/sec',
+                'k8s-worker-3': '456 Mbits/sec',
+                ...
+            },
+            ...
+        }
+    :param source_node_name: The name of the node for which 
+                             the bandwidth measurements should be returned.
+    :return: A dictionary of {destination_node: "X Mbits/sec"} for the given source node.
+    """
+    # Fetch the dictionary of bandwidths from the source node to each destination.
+    source_bandwidths = bandwidth_results.get(source_node_name, {})
+
+    # Return that dictionary unchanged. If you also want to exclude self-references,
+    # you can filter them out (shown here for completeness):
+    return {
+        dst_node: bw_value
+        for dst_node, bw_value in source_bandwidths.items()
+        if dst_node != source_node_name
+    }
+
+# Example usage:
+# Suppose `bandwidth_results` is the dictionary you provided,
+# and we want to get all outgoing bandwidths from "k8s-worker-3".
+#
+#   result = get_bandwidth_to_other_nodes(bandwidth_results, "k8s-worker-3")
+#   print(result)
 
 
 

@@ -1,0 +1,64 @@
+    {'k8s-worker-3': {
+        'k8s-worker-3': None, 'k8s-worker-9': 3.6470000000000002,
+        'k8s-worker-7': 3.613, 'k8s-worker-6': 8.477,
+        'k8s-worker-5': 4.726, 'k8s-worker-4': 2.6029999999999998,
+        'k8s-worker-1': 0.434, 'k8s-worker-2': 9.785,
+        'k8s-worker-8': 16.631
+    },
+    'k8s-worker-6': {
+        'k8s-worker-6': None, 'k8s-worker-5': 10.571,
+        'k8s-worker-3': 8.504, 'k8s-worker-7': 13.501000000000001,
+        'k8s-worker-4': 18.779, 'k8s-worker-9': 15.601,
+        'k8s-worker-1': 7.571, 'k8s-worker-8': 10.734,
+        'k8s-worker-2': 23.711
+    },
+    'k8s-worker-9': {
+        'k8s-worker-9': None, 'k8s-worker-3': 3.677,
+        'k8s-worker-4': 15.834999999999999, 'k8s-worker-5': 19.834999999999997,
+        'k8s-worker-8': 7.711, 'k8s-worker-7': 11.684999999999999,
+        'k8s-worker-1': 3.574, 'k8s-worker-2': 11.684,
+        'k8s-worker-6': 15.665999999999999
+    },
+    'k8s-worker-7': {
+        'k8s-worker-7': None, 'k8s-worker-1': 6.423,
+        'k8s-worker-5': 11.564, 'k8s-worker-3': 3.554,
+        'k8s-worker-6': 13.603, 'k8s-worker-2': 16.726000000000003,
+        'k8s-worker-9': 11.609, 'k8s-worker-4': 15.443,
+        'k8s-worker-8': 18.721
+    },
+    'k8s-worker-5': {
+        'k8s-worker-5': None, 'k8s-worker-9': 19.84,
+        'k8s-worker-3': 4.657, 'k8s-worker-7': 11.491,
+        'k8s-worker-2': 11.66, 'k8s-worker-1': 5.569,
+        'k8s-worker-6': 10.7, 'k8s-worker-8': 13.703999999999999,
+        'k8s-worker-4': 6.581
+    },
+    'k8s-worker-1': {
+        'k8s-worker-1': None, 'k8s-worker-9': 3.646,
+        'k8s-worker-3': 0.49700000000000005, 'k8s-worker-7': 6.472,
+        'k8s-worker-6': 7.550000000000001, 'k8s-worker-5': 5.472,
+        'k8s-worker-2': 5.599, 'k8s-worker-4': 11.704,
+        'k8s-worker-8': 30.546
+    },
+    'k8s-worker-2': {
+        'k8s-worker-2': None, 'k8s-worker-1': 5.597,
+        'k8s-worker-3': 9.58, 'k8s-worker-5': 11.647,
+        'k8s-worker-9': 11.917, 'k8s-worker-6': 23.654999999999998,
+        'k8s-worker-4': 12.67, 'k8s-worker-7': 16.677,
+        'k8s-worker-8': 39.675000000000004
+    },
+    'k8s-worker-8': {
+        'k8s-worker-8': None, 'k8s-worker-6': 10.678,
+        'k8s-worker-3': 16.924000000000003, 'k8s-worker-9': 7.979,
+        'k8s-worker-7': 18.68, 'k8s-worker-5': 13.747,
+        'k8s-worker-1': 30.576, 'k8s-worker-4': 20.668,
+        'k8s-worker-2': 39.684
+    },
+    'k8s-worker-4': {
+        'k8s-worker-4': None, 'k8s-worker-3': 2.71,
+        'k8s-worker-5': 6.644, 'k8s-worker-7': 15.691,
+        'k8s-worker-9': 15.970999999999998, 'k8s-worker-2': 12.761,
+        'k8s-worker-8': 20.767, 'k8s-worker-1': 11.724,
+        'k8s-worker-6': 18.787000000000003
+    }
+    }
