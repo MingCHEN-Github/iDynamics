@@ -124,13 +124,13 @@ def build_nodeinfo_objects(raw_nodes: List[client.V1Node]) -> List[NodeInfo]:
         current_mem_usage = math.ceil(current_mem_usage * 100) / 100
         
         # Get the network latency and bandwidth
-        # (1) On-time method, which is more real-time but a bit time-consuming for measuing Bnadiwth
+        # (1) On-time method, which is more real-time but a bit time-consuming (a few minitues) for measuing Bnadiwth and then building NodeInfo obejects slowly.
         # latency_results = measure_http_latency(namespace='measure-nodes')
         # bandwidth_results = measure_bandwidth(namespace='measure-nodes-bd', max_concurrent_tasks=3, test_duration=5) # concurrency can be changed as needed
         # _network_latency_ = get_latency_to_other_nodes(latency_results, node_name)
         # _network_bandwidth_ = get_bandwidth_to_other_nodes(bandwidth_results, node_name)
         
-        # (2) Off-time method, which is less real-time but faster for measuring Bandwidth
+        # (2) Off-time method, which is less real-time but much faster for buidling NodeInfo obejects
         # the latency and bandwidyh data can be updated from periodcally running the above On-time methods,
         # or the update data when detecting major changes in network conditions 
         # (e.g., via metrics, alerts, or cluster events), trigger a new measurement pass 
