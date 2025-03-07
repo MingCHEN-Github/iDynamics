@@ -1,12 +1,9 @@
 from typing import List, Dict, Tuple
 import math
-import policyExtender.my_policy_interface as my_policy_interface
-from my_policy_interface import (
-    AbstractSchedulingPolicy,
-    NodeInfo,
-    PodInfo,
-    SchedulingDecision
-)
+
+from llm_scheduling.llm_images_builder.backend_LLMs.bartLarge_backend import app
+from policyExtender.my_policy_interface import AbstractSchedulingPolicy, NodeInfo, PodInfo, SchedulingDecision
+import graph_builder
 
 
 ########################################################################
@@ -18,7 +15,7 @@ class Policy1CallGraphAware(AbstractSchedulingPolicy):
     - Good at scenario with call-graph dynamics (Request A, B, C, etc.),
       so we want to collocate heavily communicating microservices.
     - We'll use a 'traffic_matrix' or call graph from an external source
-      (e.g. from graph_builder.py) to guide placements.
+      (e.g. from graph_builder.py) to guide microservice placements.
     """
 
     def __init__(self):
@@ -37,7 +34,7 @@ class Policy1CallGraphAware(AbstractSchedulingPolicy):
         """
         Simple single-pod scheduling: 
         pick the node with the most free CPU for demonstration,
-        or you might choose a more advanced logic (co-locate with related pods).
+        or might choose a more advanced logic (co-locate with related pods).
         """
         best_node = None
         best_free_cpu = -1
@@ -65,7 +62,7 @@ class Policy1CallGraphAware(AbstractSchedulingPolicy):
         # Let's build a dict to store each pod's CPU requirement for easy reference.
         pod_cpu_req = {p.pod_name: p.cpu_req for p in pods}
 
-        # Convert traffic_matrix to a list of ((podA, podB), traffic), sorted desc
+        # Convert traffic_matrix to a list of ((podA, podB), traffic), sorted in descending order
         traffic_list = sorted(self.traffic_matrix.items(), key=lambda x: x[1], reverse=True)
 
         placed_pods = set()
@@ -124,10 +121,27 @@ class Policy1CallGraphAware(AbstractSchedulingPolicy):
 
         return decisions
 
-    def on_update_metrics(self, nodes: List[NodeInfo]) -> None:
+    def on_update_metrics(self, app_namespace = "social-network") -> None:
         """
         If traffic patterns changed because we switched from Request A to Request B, etc.,
-        we could re-build or reload the traffic matrix here.
+        we could re-build or reload the traffic matrix here using graph_builder.
         """
-        pass
+        # 1. Re-build the call graph (you might need to parameterize the namespace or other parameters).
+        #    For example, if your microservices run in a namespace named "social-network":
+        G = graph_builder.build_call_graph(namespace=app_namespace)
+
+        # 2. Convert the resulting NetworkX DiGraph into a new traffic_matrix.
+        #    Each edge in G has a "weight" attribute (KB/s, bytes, or some traffic unit).
+        #    For example, (u, v, data) => data["weight"] is the traffic from u to v.
+        new_traffic_matrix = {}
+        for u, v, data in G.edges(data=True):
+            if "weight" in data:
+                new_traffic_matrix[(u, v)] = data["weight"]  # store the numeric traffic volume
+
+        # 3. Replace our old traffic matrix with the newly built one
+        self.traffic_matrix = new_traffic_matrix
+
+        # Optionally, log or print for debugging
+        print(f"[Policy1CallGraphAware] Updated traffic matrix for app in namespace {app_namespace} with {len(self.traffic_matrix)} edges.")
+
 

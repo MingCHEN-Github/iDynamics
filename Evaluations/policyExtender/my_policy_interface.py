@@ -56,9 +56,13 @@ class AbstractSchedulingPolicy(ABC):
         pass
     
     @abstractmethod
-    def on_update_metrics(self, nodes: List[NodeInfo]) -> None:
+    def on_update_metrics(self, nodes: List[NodeInfo], app_namespace: str) -> None:
         """
         Respond to new telemetry. 
+        Parameters:
+        - nodes: List of NodeInfo objects, which can be used for node-realted metrics
+        - app_namespace: The namespace of the application, which can be used for application-specific metrics.
+        
         For instance, if the user triggers a “re-scheduling event,” you can gather new usage data here.
         
         Called periodically if metrics are updated at runtime.

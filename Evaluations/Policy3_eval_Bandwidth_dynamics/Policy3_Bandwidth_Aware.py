@@ -1,8 +1,7 @@
 # Description: Policy3: Bandwidth-Aware Scheduling
 from typing import List, Dict, Tuple
 import math
-import policyExtender.my_policy_interface as my_policy_interface
-from my_policy_interface import (
+from policyExtender.my_policy_interface import (
     AbstractSchedulingPolicy,
     NodeInfo,
     PodInfo,
