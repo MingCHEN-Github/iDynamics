@@ -134,11 +134,11 @@ def build_nodeinfo_objects(raw_nodes: List[client.V1Node]) -> List[NodeInfo]:
         # the latency and bandwidyh data can be updated from periodcally running the above On-time methods,
         # or the update data when detecting major changes in network conditions 
         # (e.g., via metrics, alerts, or cluster events), trigger a new measurement pass 
-        latency_dict_path= "/home/ubuntu/iDynamics/Evaluations/policyExtender/networking_measured_data/latency_dict.txt"
-        bandwidth_dict_path= "/home/ubuntu/iDynamics/Evaluations/policyExtender/networking_measured_data/bandwidth_dict.txt"
+        latency_dict_path= "/home/ubuntu/iDynamics/iDynamicsPackagesModules/NetworkingDynamicsManager/networking_measured_data/latency_dict.txt"
+        bandwidth_dict_path= "/home/ubuntu/iDynamics/iDynamicsPackagesModules/NetworkingDynamicsManager/networking_measured_data/bandwidth_dict.txt"
         _network_latency_ = get_networking_conditions_for_node(node_name, latency_dict_path)
-        _network_bandwidth_ = get_networking_conditions_for_node(node_name, bandwidth_dict_path)
-        
+        _network_bandwidth_raw = get_networking_conditions_for_node(node_name, bandwidth_dict_path)
+        _network_bandwidth_ = remove_units(_network_bandwidth_raw) # remove "Mbits/sec"
 
         # Build the NodeInfo object
         node_info = NodeInfo(
@@ -153,6 +153,29 @@ def build_nodeinfo_objects(raw_nodes: List[client.V1Node]) -> List[NodeInfo]:
         nodeinfo_list.append(node_info)
 
     return nodeinfo_list
+
+def remove_units(data): # use this function to remove units for _network_bandwidth_ data
+    """
+    Recursively removes units from string values in a dictionary.
+    For example, "291 Mbits/sec" becomes "291".
+    
+    Parameters:
+        data (dict or str): The input dictionary or string.
+    
+    Returns:
+        A new dictionary or string with units removed.
+    """
+    if isinstance(data, dict):
+        # Recursively apply to each value in the dictionary.
+        return {key: remove_units(value) for key, value in data.items()}
+    elif isinstance(data, str):
+        # Split the string by space and take the first part.
+        return data.split()[0]
+    else:
+        # For any other data type, return it unchanged.
+        return data
+
+
 
 def build_podinfo_objects(raw_pods: List[client.V1Pod]) -> List[PodInfo]:
     """

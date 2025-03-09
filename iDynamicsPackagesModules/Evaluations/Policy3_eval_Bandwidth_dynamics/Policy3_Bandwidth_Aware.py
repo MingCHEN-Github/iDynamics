@@ -74,8 +74,13 @@ class Policy3BandwidthAware(AbstractSchedulingPolicy):
                 free_cpu = node.cpu_capacity - node_usage_cpu[node.node_name]
                 free_mem = node.mem_capacity - node_usage_mem[node.node_name]
                 if (pod.cpu_req <= free_cpu) and (pod.mem_req <= free_mem):
+                    # print("node.network_bandwidth: ", node.network_bandwidth)
+                    
                     bw_values = node.network_bandwidth.values()
-                    avg_bw = sum(bw_values)/len(bw_values) if bw_values else 0
+                    # print("bw_values: ", bw_values)
+                    numeric_bw_values = [float(val) for val in bw_values] # convert the string values to floats
+                    avg_bw = sum(numeric_bw_values) / len(numeric_bw_values) if numeric_bw_values else 0
+
                     if avg_bw > best_bw_score:
                         best_bw_score = avg_bw
                         best_node = node
