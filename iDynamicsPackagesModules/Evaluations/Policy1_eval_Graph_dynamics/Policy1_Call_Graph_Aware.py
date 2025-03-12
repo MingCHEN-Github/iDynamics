@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 
 from iDynamicsPackagesModules.GraphDynamicsAnalyzer  import graph_builder
 from iDynamicsPackagesModules.SchedulingPolicyExtender.my_policy_interface import AbstractSchedulingPolicy, NodeInfo, PodInfo, SchedulingDecision
-from iDynamicsPackagesModules.SchedulingPolicyExtender.my_cluster_utils import gather_all_nodes, gather_all_pods, build_nodeinfo_objects, build_podinfo_objects, _extract_deployment_from_pod
+from iDynamicsPackagesModules.SchedulingPolicyExtender.my_cluster_utils import gather_all_nodes, gather_all_pods, build_nodeinfo_objects, build_podinfo_objects, get_deployment_from_pod
 
 ########################################################################
 # Policy1: Call-Graph–Aware Scheduling
@@ -19,13 +19,13 @@ class Policy1CallGraphAware(AbstractSchedulingPolicy):
     Policy1:
     - Good at scenario with call-graph dynamics (Request A, B, C, etc.),
       so we want to collocate heavily communicating microservices.
-    - We'll use a 'traffic_matrix' from an external source
+    - We'll use a 'traffic_pairs' from an external source
       (e.g. from graph_builder.py) to guide microservice placements.
     """
 
     def __init__(self):
         super().__init__()
-        self.traffic_matrix = {}  # (serviceA, serviceB) -> traffic volume
+        self.traffic_pairs = {}  # { (serviceA, serviceB) -> traffic volume, ....,...}
 
     def initialize_policy(self, dynamics_config: dict, 
                           prom_url: str, 
@@ -35,7 +35,7 @@ class Policy1CallGraphAware(AbstractSchedulingPolicy):
                           response_code='200') -> None:
         """
         Load or prepare a call graph or traffic matrix from 'dynamics_config'.
-        Example: config["traffic_matrix"] could be a dict:
+        Example: config["traffic_pairs"] could be a dict:
             {("serviceA", "serviceB"): 1000, ...}
         """
          # Kubernetes Config
@@ -49,7 +49,7 @@ class Policy1CallGraphAware(AbstractSchedulingPolicy):
         self.namespace = namespace
         self.response_code = response_code # default code is 200 (success); can be changed to 500 (error)
         
-        self.traffic_matrix = dynamics_config.get("traffic_matrix", {})
+        self.traffic_pairs = dynamics_config.get("traffic_pairs", {})
     
     def trigger_migration(self):
         """
@@ -111,6 +111,7 @@ class Policy1CallGraphAware(AbstractSchedulingPolicy):
         Simple single-pod scheduling: 
         pick the node with the most free CPU for demonstration,
         or might choose a more advanced logic (co-locate with related pods).
+        retrun a SchedulingDecision (PodInfo Object, and NodeInfo Obejct) for a single pod.
         """
         best_node = None
         best_free_cpu = -1
@@ -121,13 +122,13 @@ class Policy1CallGraphAware(AbstractSchedulingPolicy):
                 best_free_cpu = free_cpu
                 best_node = node
 
-        return SchedulingDecision(pod_name=pod.pod_name, selected_node=best_node.node_name)
+        return SchedulingDecision(podInfo_obj = pod, selected_nodeInfo=best_node)
 
     def schedule_all(self, pods: List[PodInfo], candidate_nodes: List[NodeInfo]) -> List[SchedulingDecision]:
         """
         Batch scheduling approach:
         1. We want to place heavily communicating pairs on the same node if feasible.
-        2. 'traffic_matrix' is a dict with traffic volumes between pairs (podA, podB).
+        2. 'traffic_pairs' is a dict with traffic volumes between pairs (podA, podB).
         3. We attempt to co-locate the top-k highest traffic pairs.
         """
         # We'll need usage info on each node as we place pods
@@ -138,12 +139,14 @@ class Policy1CallGraphAware(AbstractSchedulingPolicy):
         # Let's build a dict to store each pod's CPU requirement for easy reference.
         pod_cpu_req = {p.pod_name: p.cpu_req for p in pods}
 
-        # Convert traffic_matrix to a list of ((podA, podB), traffic), sorted in descending order
-        traffic_list = sorted(self.traffic_matrix.items(), key=lambda x: x[1], reverse=True)
+        # Convert traffic_pairs to a list of ((podA, podB), traffic), sorted in descending order
+        sorted_traffic_pair = sorted(self.traffic_pairs.items(), key=lambda x: x[1], reverse=True)
 
         placed_pods = set()
-
-        for (podA, podB), traffic_val in traffic_list:
+        
+        
+        # podA, podB are the names of the pods, and traffic_val is the traffic volume between them
+        for (podA, podB), traffic_val in sorted_traffic_pair:
             # if these pods are in the set of pods to schedule:
             if podA not in pod_cpu_req or podB not in pod_cpu_req:
                 continue
@@ -211,19 +214,19 @@ class Policy1CallGraphAware(AbstractSchedulingPolicy):
         #    For example, if your microservices run in a namespace named "social-network":
         G = graph_builder.build_call_graph(namespace=app_namespace)
 
-        # 2. Convert the resulting NetworkX DiGraph into a new traffic_matrix.
+        # 2. Convert the resulting NetworkX DiGraph into a new traffic_pairs dict.
         #    Each edge in G has a "weight" attribute (KB/s, bytes, or some traffic unit).
         #    For example, (u, v, data) => data["weight"] is the traffic from u to v.
-        new_traffic_matrix = {}
+        new_traffic_pairs = {}
         for u, v, data in G.edges(data=True):
             if "weight" in data:
-                new_traffic_matrix[(u, v)] = data["weight"]  # store the numeric traffic volume
+                new_traffic_pairs[(u, v)] = data["weight"]  # store the numeric traffic volume
 
         # 3. Replace our old traffic matrix with the newly built one
-        self.traffic_matrix = new_traffic_matrix
+        self.traffic_pairs = new_traffic_pairs
 
         # Optionally, log or print for debugging
-        print(f"[Policy1CallGraphAware] Updated traffic matrix for app in namespace {app_namespace} with {len(self.traffic_matrix)} edges.")
+        print(f"[Policy1CallGraphAware] Updated traffic matrix for app in namespace {app_namespace} with {len(self.traffic_pairs)} edges.")
         
        
     #### Helper Functions (Begin) #### 
@@ -322,15 +325,13 @@ class Policy1CallGraphAware(AbstractSchedulingPolicy):
                 # dec_microservice = _extract_deployment_from_pod(dec.pod_name)
 
                 print(f" Pod {dec.pod_name} -> schedule to Node {dec.selected_node}")
-            
-            
-            
+
             # Perform migrations concurrently using ThreadPoolExecutor
             with concurrent.futures.ThreadPoolExecutor() as executor:
                 futures = []
                 for dec in decisions_s1:
                     
-                    dec_microservice = _extract_deployment_from_pod(dec.pod_name)
+                    dec_microservice = get_deployment_from_pod(dec.pod_name, namespace = self.namespace)
                     future = executor.submit(self.migrate_and_wait_for_update, dec_microservice, dec.selected_node)
                     futures.append(future)
 

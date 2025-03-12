@@ -13,17 +13,23 @@ class NodeInfo:
         self.network_bandwidth = network_bandwidth   # Could be a dict
 
 class PodInfo:
-    def __init__(self, pod_name, cpu_req, mem_req, sla_latency_requirement, deployment_name=None):
+    def __init__(self, pod_name, cpu_req, mem_req, sla_requirement, deployment_name=None):
         self.pod_name = pod_name
         self.cpu_req = cpu_req
         self.mem_req = mem_req
-        self.sla_latency_requirement = sla_latency_requirement
+        self.sla_requirement = sla_requirement
         self.deployment_name = deployment_name  # helpful if need to patch the deployment
 
+# class SchedulingDecision:
+#     def __init__(self, pod_name, selected_node):
+#         self.pod_name = pod_name
+#         self.selected_node = selected_node
+
 class SchedulingDecision:
-    def __init__(self, pod_name, selected_node):
-        self.pod_name = pod_name
-        self.selected_node = selected_node
+    # return the PodIno obeject and NodeInfo object
+    def __init__(self, pod: PodInfo, node: NodeInfo):
+        self.pod = pod
+        self.node = node
 
 class AbstractSchedulingPolicy(ABC):
     @abstractmethod

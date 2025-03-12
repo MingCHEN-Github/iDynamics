@@ -177,7 +177,7 @@ def remove_units(data): # use this function to remove units for _network_bandwid
 
 
 
-def build_podinfo_objects(raw_pods: List[client.V1Pod]) -> List[PodInfo]:
+def build_podinfo_objects(raw_pods: List[client.V1Pod], namespace: str) -> List[PodInfo]:
     """
     Convert raw Pod objects into PodInfo. 
     For CPU/Memory requests, parse from pod.spec.containers[].resources.requests.
@@ -209,18 +209,18 @@ def build_podinfo_objects(raw_pods: List[client.V1Pod]) -> List[PodInfo]:
                     total_mem_req += _convert_memory_to_mebibytes(mem_req_str)
 
         # Suppose we store the Deployment name for reference:
-        deployment_name = _extract_deployment_from_pod(pod)
+        deployment_name = get_deployment_from_pod(pod)
 
         # If your system has an SLA or desired latency requirement:
         # You could store it in an annotation, or pass it in from somewhere else.
         # We'll just use a placeholder of 200 ms for now.
-        sla_latency_requirement = 200.0 # can be changed as needed
+        sla_requirement = 200.0 # can be changed as needed
 
         pod_info = PodInfo(
             pod_name=pod_name,
             cpu_req=total_cpu_req,
             mem_req=total_mem_req,
-            sla_latency_requirement=sla_latency_requirement,
+            sla_requirement=sla_requirement,
             deployment_name=deployment_name
         )
         podinfo_list.append(pod_info)
@@ -410,29 +410,67 @@ def get_bandwidth_to_other_nodes(bandwidth_results: dict, source_node_name: str)
 # Helper functions
 # ---------------------------------------------------------------------
 
-def _extract_deployment_from_pod(pod: client.V1Pod) -> str:
+# def _extract_deployment_from_pod(pod_name: str, namespace: str) -> str:
+
+#     # Get pod details
+#     config.load_kube_config()
+#     api = client.CoreV1Api()
+#     apps_v1 = client.AppsV1Api()
+#     # Get pod details
+#     pod = api.read_namespaced_pod(pod_name, namespace)
+
+    
+#     if not pod.metadata.owner_references:
+#         return None
+#     # Get pod owner (Replicaset)
+#     for owner_ref in pod.metadata.owner_references:
+#         if owner_ref.kind == "ReplicaSet":
+#             replicaset_name = owner_ref.name
+#             # Retrieve the replicaset to see if it references a deployment
+#             try:
+#                 rs = apps_v1.read_namespaced_replica_set(replicaset_name, pod.metadata.namespace)
+#                 if rs.metadata.owner_references:
+#                     for rs_owner_ref in rs.metadata.owner_references:
+#                         if rs_owner_ref.kind == "Deployment":
+#                             return rs_owner_ref.name
+#             except:
+#                 pass
+#         else:
+#             print(f"Cannot find Deployment name. Unexpected owner kind: {owner_ref.kind}")
+#     return None
+
+
+def get_deployment_from_pod(pod_name: str, namespace: str) -> str:
     """
     If a pod is controlled by a ReplicaSet, which is in turn controlled by a Deployment,
     return the deployment name; otherwise return None.
     """
-    if not pod.metadata.owner_references:
-        return None
-    apps_v1 = client.AppsV1Api()
-    for owner_ref in pod.metadata.owner_references:
-        if owner_ref.kind == "ReplicaSet":
-            replicaset_name = owner_ref.name
-            # Retrieve the replicaset to see if it references a deployment
-            try:
-                rs = apps_v1.read_namespaced_replica_set(replicaset_name, pod.metadata.namespace)
-                if rs.metadata.owner_references:
-                    for rs_owner_ref in rs.metadata.owner_references:
-                        if rs_owner_ref.kind == "Deployment":
-                            return rs_owner_ref.name
-            except:
-                pass
-        else:
-            print(f"Cannot find Deployment name. Unexpected owner kind: {owner_ref.kind}")
+    config.load_kube_config()
+    api = client.CoreV1Api()
+    apps_api = client.AppsV1Api()
+
+    # Get pod details
+    pod = api.read_namespaced_pod(pod_name, namespace)
+
+    # Get pod owner (ReplicaSet)
+    owner_refs = pod.metadata.owner_references
+    if owner_refs:
+        rs_name = owner_refs[0].name
+        rs = apps_api.read_namespaced_replica_set(rs_name, namespace)
+
+        # Get ReplicaSet owner (Deployment)
+        rs_owner_refs = rs.metadata.owner_references
+        if rs_owner_refs:
+            deployment_name = rs_owner_refs[0].name
+            return deployment_name
+        
+    print(f"Cannot find Deployment name. Unexpected owner kind: {owner_refs.kind}")
     return None
+
+# Usage example:
+# print(get_deployment_from_pod("your-pod-name", "namespace"))
+
+
 
 def _parse_cpu_request(cpu_req_str: str) -> float:
     """
