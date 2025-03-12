@@ -23,11 +23,11 @@ class Policy3BandwidthAware(AbstractSchedulingPolicy):
         super().__init__()
         self.high_traffic_threshold = 200.0
 
-    def initialize_policy(self, config: dict) -> None:
+    def initialize_policy(self, dynamics_config: dict) -> None:
         """
         Possibly load a user-specified threshold or weighting factor from config.
         """
-        self.high_traffic_threshold = config.get("high_traffic_threshold", 200.0)
+        self.high_traffic_threshold = dynamics_config.get("high_traffic_threshold", 200.0)
 
     def schedule_pod(self, pod: PodInfo, candidate_nodes: List[NodeInfo]) -> SchedulingDecision:
         """
@@ -73,6 +73,11 @@ class Policy3BandwidthAware(AbstractSchedulingPolicy):
             for node in candidate_nodes:
                 free_cpu = node.cpu_capacity - node_usage_cpu[node.node_name]
                 free_mem = node.mem_capacity - node_usage_mem[node.node_name]
+                
+                # add more stricter conditions, to avoid all pods are placed on the same node
+                free_cpu = 0.5 * free_cpu
+                free_mem = 0.5 * free_mem
+                
                 if (pod.cpu_req <= free_cpu) and (pod.mem_req <= free_mem):
                     # print("node.network_bandwidth: ", node.network_bandwidth)
                     

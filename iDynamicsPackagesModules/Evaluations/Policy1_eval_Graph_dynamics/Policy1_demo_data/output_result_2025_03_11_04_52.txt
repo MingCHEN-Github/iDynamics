@@ -1,0 +1,29 @@
+Usage: wrk <options> <url>                                       
+  Options:                                                       
+    -c, --connections <N>  Connections to keep open              
+    -D, --dist        <S>  fixed, exp, norm, zipf                
+    -P                     Print each request's latency          
+    -p                     Print 99th latency every 0.2s to file 
+                           under the current working directory   
+    -d, --duration    <T>  Duration of test                      
+    -t, --threads     <N>  Number of threads to use              
+                                                                 
+    -s, --script      <S>  Load Lua script file                  
+    -H, --header      <H>  Add header to request                 
+    -L, --latency          Print latency statistics              
+    -S, --separate         Print statistics on different url     
+    -T, --timeout     <T>  Socket/request timeout [unit:s]       
+    -B, --batch_latency    Measure latency of whole              
+                           batches of pipelined ops              
+                           (as opposed to each op)               
+    -r, --requests         Show the number of sent requests      
+    -v, --version          Print version details                 
+    -R, --rate        <T>  work rate (throughput)                
+                           in requests/sec (total)               
+                           [Required Parameter]                  
+                                                                 
+                                                                 
+  Numeric arguments may include a SI unit (1k, 1M, 1G)           
+  Time arguments may include a time unit (2s, 2m, 2h)            
+
+

@@ -1,0 +1,92 @@
+{
+    "k8s-worker-3": {
+        "k8s-worker-1": "1.22 Gbits/sec",
+        "k8s-worker-5": "1.86 Gbits/sec",
+        "k8s-worker-8": "359 Mbits/sec",
+        "k8s-worker-9": "2.04 Gbits/sec",
+        "k8s-worker-2": "1.24 Gbits/sec",
+        "k8s-worker-6": "574 Mbits/sec",
+        "k8s-worker-7": "1.52 Gbits/sec",
+        "k8s-worker-4": "1.13 Gbits/sec"
+    },
+    "k8s-worker-1": {
+        "k8s-worker-3": "2.41 Gbits/sec",
+        "k8s-worker-8": "601 Mbits/sec",
+        "k8s-worker-5": "2.47 Gbits/sec",
+        "k8s-worker-9": "2.76 Gbits/sec",
+        "k8s-worker-2": "2.49 Gbits/sec",
+        "k8s-worker-6": "1.13 Gbits/sec",
+        "k8s-worker-7": "2.14 Gbits/sec",
+        "k8s-worker-4": "1.89 Gbits/sec"
+    },
+    "k8s-worker-8": {
+        "k8s-worker-3": "725 Mbits/sec",
+        "k8s-worker-1": "588 Mbits/sec",
+        "k8s-worker-5": "744 Mbits/sec",
+        "k8s-worker-9": "778 Mbits/sec",
+        "k8s-worker-6": "757 Mbits/sec",
+        "k8s-worker-7": "715 Mbits/sec",
+        "k8s-worker-2": "454 Mbits/sec",
+        "k8s-worker-4": "702 Mbits/sec"
+    },
+    "k8s-worker-5": {
+        "k8s-worker-3": "795 Mbits/sec",
+        "k8s-worker-1": "790 Mbits/sec",
+        "k8s-worker-8": "745 Mbits/sec",
+        "k8s-worker-9": "714 Mbits/sec",
+        "k8s-worker-6": "769 Mbits/sec",
+        "k8s-worker-2": "762 Mbits/sec",
+        "k8s-worker-7": "755 Mbits/sec",
+        "k8s-worker-4": "782 Mbits/sec"
+    },
+    "k8s-worker-9": {
+        "k8s-worker-3": "801 Mbits/sec",
+        "k8s-worker-1": "804 Mbits/sec",
+        "k8s-worker-8": "779 Mbits/sec",
+        "k8s-worker-5": "706 Mbits/sec",
+        "k8s-worker-6": "732 Mbits/sec",
+        "k8s-worker-2": "758 Mbits/sec",
+        "k8s-worker-7": "767 Mbits/sec",
+        "k8s-worker-4": "734 Mbits/sec"
+    },
+    "k8s-worker-6": {
+        "k8s-worker-3": "781 Mbits/sec",
+        "k8s-worker-1": "781 Mbits/sec",
+        "k8s-worker-8": "768 Mbits/sec",
+        "k8s-worker-5": "770 Mbits/sec",
+        "k8s-worker-9": "740 Mbits/sec",
+        "k8s-worker-7": "746 Mbits/sec",
+        "k8s-worker-2": "674 Mbits/sec",
+        "k8s-worker-4": "702 Mbits/sec"
+    },
+    "k8s-worker-2": {
+        "k8s-worker-3": "766 Mbits/sec",
+        "k8s-worker-1": "795 Mbits/sec",
+        "k8s-worker-8": "479 Mbits/sec",
+        "k8s-worker-5": "744 Mbits/sec",
+        "k8s-worker-9": "743 Mbits/sec",
+        "k8s-worker-6": "698 Mbits/sec",
+        "k8s-worker-4": "749 Mbits/sec",
+        "k8s-worker-7": "723 Mbits/sec"
+    },
+    "k8s-worker-7": {
+        "k8s-worker-3": "794 Mbits/sec",
+        "k8s-worker-1": "784 Mbits/sec",
+        "k8s-worker-8": "710 Mbits/sec",
+        "k8s-worker-5": "756 Mbits/sec",
+        "k8s-worker-9": "758 Mbits/sec",
+        "k8s-worker-6": "756 Mbits/sec",
+        "k8s-worker-2": "722 Mbits/sec",
+        "k8s-worker-4": "734 Mbits/sec"
+    },
+    "k8s-worker-4": {
+        "k8s-worker-3": "798 Mbits/sec",
+        "k8s-worker-1": "754 Mbits/sec",
+        "k8s-worker-5": "777 Mbits/sec",
+        "k8s-worker-8": "689 Mbits/sec",
+        "k8s-worker-9": "737 Mbits/sec",
+        "k8s-worker-6": "715 Mbits/sec",
+        "k8s-worker-2": "754 Mbits/sec",
+        "k8s-worker-7": "734 Mbits/sec"
+    }
+}

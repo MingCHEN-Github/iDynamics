@@ -430,6 +430,8 @@ def _extract_deployment_from_pod(pod: client.V1Pod) -> str:
                             return rs_owner_ref.name
             except:
                 pass
+        else:
+            print(f"Cannot find Deployment name. Unexpected owner kind: {owner_ref.kind}")
     return None
 
 def _parse_cpu_request(cpu_req_str: str) -> float:

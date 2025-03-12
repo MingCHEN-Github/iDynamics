@@ -10,7 +10,7 @@ def wrk_different_requests(req_script: str, url: str, request_interval: str):
     thread_num = 4
     connections = 100
     duration = request_interval  # e.g., "30s", "1m", "5m", "10m", "15m"
-    QPS = [20]  # can add more QPS values for different tests, e.g., [20, 50, 80, 36]
+    QPS = [60]  # can add more QPS values for different tests, e.g., [20, 50, 80, 36]
 
     # Allow req_script and url to be either a single string or a list of strings.
     if isinstance(req_script, str):
@@ -24,7 +24,7 @@ def wrk_different_requests(req_script: str, url: str, request_interval: str):
         urls = url
 
     # Define the output directory path and expand the tilde to the home directory.
-    output_dir = os.path.expanduser("~/iDynamics/Evaluations/Policy1_eval_Graph_dynamics/Policy1_demo_data/")
+    output_dir = os.path.expanduser("~/iDynamics/iDynamicsPackagesModules/Evaluations/Policy1_eval_Graph_dynamics/Policy1_demo_data/")
     # Create the directory if it doesn't exist.
     os.makedirs(output_dir, exist_ok=True)
 
@@ -68,7 +68,32 @@ def wrk_different_requests(req_script: str, url: str, request_interval: str):
             print("--------------------------------------------------")
     print("All wrk_different_requests tests are done!")
 
+request_A_script_path = "/home/ubuntu/DeathStarBench/socialNetwork/wrk2/scripts/social-network/compose-post.lua"
+request_B_script_path = "/home/ubuntu/DeathStarBench/socialNetwork/wrk2/scripts/social-network/read-home-timeline.lua"
+request_C_script_path = "/home/ubuntu/DeathStarBench/socialNetwork/wrk2/scripts/social-network/read-user-timeline.lua"
 
+request_mix_script_path = "/home/ubuntu/DeathStarBench/socialNetwork/wrk2/scripts/social-network/mixed-workload.lua" # default mix percentage: 60% A, 30% B, 10% C
+
+script_path = [
+    request_A_script_path,
+    request_B_script_path,
+    request_C_script_path,
+    request_mix_script_path
+]
+
+url = [
+    #diffferent namespace of social-network Application
+    "http://nginx-thrift.social-network.svc.cluster.local:8080",       # in namespace of "social-network"
+    "http://nginx-thrift.social-network2.svc.cluster.local:8080",
+   "http://nginx-thrift.social-network3.svc.cluster.local:8080"
+]
+
+each_wrk_duration = "30s" # eg., "30s", "1m", 5m", "10m", "15m"
+
+for j in range(0, len(url)):
+    for i in range(0, len(script_path)):
+
+        wrk_different_requests(script_path[i], url[j], request_interval = each_wrk_duration)
 
 # def wrk_different_requests(req_script:str, url:str, request_interval: str):
 #     # Define the parameters, which an be changed for different tests

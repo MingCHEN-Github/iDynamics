@@ -1,4 +1,3 @@
-# 
 from typing import List, Dict, Tuple
 import math
 from iDynamicsPackagesModules.SchedulingPolicyExtender.my_policy_interface import (
@@ -23,11 +22,11 @@ class Policy2LatencyAware(AbstractSchedulingPolicy):
         super().__init__()
         self.latency_threshold = 10.0
 
-    def initialize_policy(self, config: dict) -> None:
+    def initialize_policy(self, dynamics_config: dict) -> None:
         """
         Possibly load a user-specified threshold or latency weighting factor from config.
         """
-        self.latency_threshold = config.get("latency_threshold", 10.0)
+        self.latency_threshold = dynamics_config.get("latency_threshold", 10.0)
 
     def schedule_pod(self, pod: PodInfo, candidate_nodes: List[NodeInfo]) -> SchedulingDecision:
         """
@@ -45,6 +44,10 @@ class Policy2LatencyAware(AbstractSchedulingPolicy):
             # Check capacity
             free_cpu = node.cpu_capacity - node.current_cpu_usage
             free_mem = node.mem_capacity - node.current_mem_usage
+            
+            # add more strict conditions, to avoid all pods are placed on the same node
+            free_cpu = 0.5 * free_cpu
+            free_mem = 0.5 * free_mem
 
             if (pod.cpu_req < free_cpu) and (pod.mem_req < free_mem) and (avg_lat < best_latency_val):
                 best_latency_val = avg_lat

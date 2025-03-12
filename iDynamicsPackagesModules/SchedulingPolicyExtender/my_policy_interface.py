@@ -27,13 +27,27 @@ class SchedulingDecision:
 
 class AbstractSchedulingPolicy(ABC):
     @abstractmethod
-    def initialize_policy(self, config: dict) -> None:
+    def initialize_policy(self, dynamics_config: dict) -> None:
         """
         Load the Prometheus URL, or set up connections or configuration objects if needed.
         
     
         Called once when the policy is created.# load
         """
+        pass
+    
+    @abstractmethod
+    def trigger_migration(self) -> bool:
+        """
+        Trigger a migration event. 
+        
+        Called when the user triggers a migration event.
+        
+        Users can define a QoS metric to trigger a migration event.
+        
+        return a boolean indicating whether the migration is triggered.
+        """
+        
         pass
 
     @abstractmethod
@@ -68,3 +82,21 @@ class AbstractSchedulingPolicy(ABC):
         Called periodically if metrics are updated at runtime.
         """
         pass
+    
+    @abstractmethod
+    def run(self):
+        """
+        This scheduler class is designed to be runtime scheduler, which means it will be continuously running
+        to monoitor the deployed application in the given 'namespace' and take scheduling decisions once certain
+        defined SLA (like QoS average response time) is violated to trigger scheduling decisions.
+        Main function to run the scheduler.
+        """
+        if self.trigger_migration():
+            # trigger microservice pods migration (True of False)
+            '''
+            (1) Get the current state of the system, e.g, pods, nodes, metrics (promethues, istio, jager).
+            (2) Run the scheduling algorithm.
+            (3) Apply the scheduling decisions.
+            '''
+            
+            pass
