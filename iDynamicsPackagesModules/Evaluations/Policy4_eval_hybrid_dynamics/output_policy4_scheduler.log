@@ -1,0 +1,1388 @@
+nohup: ignoring input
+Running the scheduler...: 2025-03-19 08:46:51.712636
+Query returned no data, no trigger.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:47:11.721264
+Query returned no data, no trigger.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:47:31.747441
+Query returned no data, no trigger.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:47:51.762147
+Query returned no data, no trigger.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:48:11.788016
+Query returned no data, no trigger.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:48:31.800890
+Query returned no data, no trigger.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:48:51.826545
+Query returned no data, no trigger.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:49:11.852649
+Average response time = 248.60 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:49:31.861731
+Average response time = 226.07 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:49:51.885012
+Average response time = 230.59 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:50:11.894644
+Average response time = 237.92 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:50:31.920017
+Average response time = 230.84 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:50:51.925789
+Average response time = 232.11 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:51:11.951511
+Average response time = 233.41 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:51:31.977651
+Average response time = 230.58 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:51:52.002220
+Average response time = 233.05 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:52:12.028440
+Average response time = 231.22 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:52:32.045141
+Average response time = 227.60 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:52:52.070993
+Average response time = 231.77 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:53:12.083982
+Average response time = 229.10 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:53:32.109516
+Average response time = 225.98 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:53:52.134831
+Average response time = 233.06 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:54:12.160001
+Average response time = 248.75 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:54:32.178679
+Average response time = 249.79 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:54:52.200982
+Average response time = 255.83 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:55:12.212084
+Average response time = 278.11 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:55:32.234438
+Average response time = 280.36 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:55:52.260292
+Average response time = 279.08 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:56:12.286957
+Average response time = 278.09 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:56:32.299673
+Average response time = 277.09 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:56:52.324006
+Average response time = 279.70 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:57:12.350087
+Average response time = 255.77 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:57:32.376515
+Average response time = 230.83 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:57:52.403094
+Average response time = 243.43 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:58:12.423112
+Average response time = 263.07 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:58:32.431335
+Average response time = 248.61 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:58:52.444897
+Average response time = 255.19 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:59:12.471408
+Average response time = 278.29 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:59:32.498394
+Average response time = 278.78 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 08:59:52.520936
+Average response time = 279.85 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:00:12.547498
+Average response time = 280.38 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:00:32.573699
+Average response time = 280.71 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:00:52.600025
+Average response time = 279.37 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:01:12.625790
+Average response time = 276.17 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:01:32.652102
+Average response time = 277.02 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:01:52.679099
+Average response time = 268.77 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:02:12.691793
+Average response time = 270.27 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:02:32.716418
+Average response time = 270.56 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:02:52.740019
+Average response time = 262.42 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:03:12.764279
+Average response time = 270.17 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:03:32.791250
+Average response time = 269.96 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:03:52.817754
+Average response time = 272.24 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:04:12.835979
+Average response time = 271.30 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:04:32.853291
+Average response time = 266.88 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:04:52.879018
+Average response time = 270.74 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:05:12.903978
+Average response time = 272.11 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:05:32.929380
+Average response time = 270.57 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:05:52.955581
+Average response time = 267.66 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:06:12.981656
+Average response time = 257.61 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:06:33.007497
+Average response time = 255.65 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:06:53.034661
+Average response time = 245.22 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:07:13.060454
+Average response time = 216.02 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:07:33.083981
+Average response time = 209.30 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:07:53.096028
+Average response time = 213.46 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:08:13.111982
+Average response time = 211.43 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:08:33.132451
+Average response time = 208.58 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:08:53.159625
+Average response time = 209.25 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:09:13.185842
+Average response time = 196.48 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:09:33.195352
+Average response time = 187.23 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:09:53.222188
+Average response time = 195.83 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:10:13.233218
+Average response time = 211.02 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:10:33.256033
+Average response time = 207.73 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:10:53.277563
+Average response time = 212.74 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:11:13.303041
+Average response time = 224.36 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:11:33.329617
+Average response time = 227.32 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:11:53.348466
+Average response time = 228.64 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:12:13.368012
+Average response time = 229.62 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:12:33.392864
+Average response time = 229.35 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:12:53.413161
+Average response time = 230.04 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:13:13.421312
+Average response time = 225.63 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:13:33.447050
+Average response time = 218.29 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:13:53.474601
+Average response time = 216.27 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:14:13.501315
+Average response time = 217.75 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:14:33.527517
+Average response time = 217.11 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:14:53.554029
+Average response time = 214.05 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:15:13.569613
+Average response time = 221.06 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:15:33.595654
+Average response time = 226.03 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:15:53.620126
+Average response time = 223.10 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:16:13.646291
+Average response time = 225.12 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:16:33.672718
+Average response time = 226.36 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:16:53.680114
+Average response time = 223.21 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:17:13.696013
+Average response time = 222.62 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:17:33.720580
+Average response time = 220.08 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:17:53.746299
+Average response time = 214.41 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:18:13.772965
+Average response time = 221.89 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:18:33.800232
+Average response time = 223.89 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:18:53.820179
+Average response time = 220.04 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:19:13.840069
+Average response time = 228.56 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:19:33.861837
+Average response time = 243.88 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:19:53.872891
+Average response time = 245.73 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:20:13.888326
+Average response time = 234.80 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:20:33.914794
+Average response time = 244.93 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:20:53.941979
+Average response time = 244.22 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:21:13.969560
+Average response time = 232.75 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:21:33.984366
+Average response time = 234.74 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:21:54.010639
+Average response time = 231.99 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:22:14.026430
+Average response time = 203.97 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:22:34.048070
+Average response time = 193.75 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:22:54.059662
+Average response time = 192.88 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:23:14.083874
+Average response time = 169.55 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:23:34.092127
+Average response time = 158.52 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:23:54.118026
+Average response time = 157.14 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:24:14.130553
+Average response time = 157.98 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:24:34.156965
+Average response time = 159.08 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:24:54.166922
+Average response time = 157.74 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:25:14.193545
+Average response time = 159.09 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:25:34.200987
+Average response time = 168.88 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:25:54.226898
+Average response time = 172.17 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:26:14.239629
+Average response time = 186.84 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:26:34.256008
+Average response time = 210.43 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:26:54.262467
+Average response time = 227.11 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:27:14.288667
+Average response time = 262.18 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:27:34.314482
+Average response time = 269.82 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:27:54.340499
+Average response time = 271.14 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:28:14.367134
+Average response time = 270.55 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:28:34.393505
+Average response time = 268.94 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:28:54.419208
+Average response time = 271.67 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:29:14.432010
+Average response time = 279.83 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:29:34.457599
+Average response time = 280.67 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:29:54.484812
+Average response time = 284.31 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:30:14.507871
+Average response time = 290.31 ms
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:30:34.529052
+Average response time = 307.61 ms
+Trigger = True
+from compose-post-service to home-timeline-service average_traffic_bytes: 302 KB
+from compose-post-service to media-service average_traffic_bytes: 431 KB
+from compose-post-service to post-storage-service average_traffic_bytes: 1686 KB
+from compose-post-service to text-service average_traffic_bytes: 2309 KB
+from compose-post-service to unique-id-service average_traffic_bytes: 262 KB
+from compose-post-service to user-service average_traffic_bytes: 359 KB
+from compose-post-service to user-timeline-service average_traffic_bytes: 291 KB
+from home-timeline-service to social-graph-service average_traffic_bytes: 259 KB
+from nginx-thrift to compose-post-service average_traffic_bytes: 1239 KB
+from post-storage-service to post-storage-mongodb average_traffic_bytes: 2132 KB
+from social-graph-service to social-graph-mongodb average_traffic_bytes: 380 KB
+from social-graph-service to social-graph-redis average_traffic_bytes: 82 KB
+from text-service to url-shorten-service average_traffic_bytes: 1247 KB
+from text-service to user-mention-service average_traffic_bytes: 356 KB
+from url-shorten-service to url-shorten-mongodb average_traffic_bytes: 0 KB
+from user-mention-service to user-memcached average_traffic_bytes: 377 KB
+from user-mention-service to user-mongodb average_traffic_bytes: 453 KB
+from user-service to user-mongodb average_traffic_bytes: 1 KB
+from user-timeline-service to user-timeline-mongodb average_traffic_bytes: 9538 KB
+from user-timeline-service to user-timeline-redis average_traffic_bytes: 132 KB
+Remaining Server Capacities: {'k8s-master': {'cpu': 31.149999999999995, 'memory': 128566, 'nvidia.com/gpu': 0}, 'k8s-worker-1': {'cpu': 0.05000000000000344, 'memory': 13132, 'nvidia.com/gpu': 0}, 'k8s-worker-2': {'cpu': 1.6700000000000028, 'memory': 14336, 'nvidia.com/gpu': 0}, 'k8s-worker-3': {'cpu': 1.8000000000000034, 'memory': 14172, 'nvidia.com/gpu': 0}, 'k8s-worker-4': {'cpu': 1.500000000000003, 'memory': 14166, 'nvidia.com/gpu': 0}, 'k8s-worker-5': {'cpu': 1.6500000000000032, 'memory': 14230, 'nvidia.com/gpu': 0}, 'k8s-worker-6': {'cpu': 1.710000000000003, 'memory': 14200, 'nvidia.com/gpu': 0}, 'k8s-worker-7': {'cpu': 1.8500000000000034, 'memory': 14106, 'nvidia.com/gpu': 0}, 'k8s-worker-8': {'cpu': 1.7400000000000038, 'memory': 14254, 'nvidia.com/gpu': 0}, 'k8s-worker-9': {'cpu': 2.0100000000000033, 'memory': 14246, 'nvidia.com/gpu': 0}}
+Initial Placement: [3, 8, 2, 1, 5, 8, 7, 4, 6, 3, 8, 2, 2, 6, 8, 2, 1, 8, 2, 5, 3, 2, 3, 7, 3, 8, 2]
+Initial Communication Cost: 320818.63499999995
+Sorted pairs: [(26, 24, 9538.0), (0, 15, 2309.0), (11, 10, 2132.0), (0, 11, 1686.0), (15, 19, 1247.0), (8, 0, 1239.0), (21, 22, 453.0), (0, 7, 431.0), (14, 12, 380.0), (21, 20, 377.0), (0, 23, 359.0), (15, 21, 356.0), (0, 2, 302.0), (0, 26, 291.0), (0, 16, 262.0), (2, 14, 259.0), (26, 25, 132.0), (14, 13, 82.0), (23, 22, 1.0)]
+Final Placement: [3, 8, 2, 1, 5, 8, 7, 4, 6, 3, 8, 2, 2, 6, 8, 2, 1, 8, 2, 5, 3, 2, 3, 7, 3, 8, 2]
+Total Communication Cost: 158844.319
+All Migrations needed: []
+Running the scheduler...: 2025-03-19 09:31:15.383449
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:31:35.410774
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:31:55.420581
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:32:15.444132
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:32:35.469431
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:32:55.495437
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:33:15.521694
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:33:35.538887
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:33:55.554944
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:34:15.580309
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:34:35.606703
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:34:55.617987
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:35:15.629589
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:35:35.636877
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:35:55.662706
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:36:15.688377
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:36:35.715037
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:36:55.741490
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:37:15.766904
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:37:35.793426
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:37:55.819744
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:38:15.846001
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:38:35.872312
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:38:55.881806
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:39:15.893153
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:39:35.920176
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:39:55.939736
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:40:15.966625
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:40:35.992546
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:40:56.019200
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:41:16.046060
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:41:36.059722
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:41:56.076363
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:42:16.102507
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:42:36.112010
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:42:56.140154
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:43:16.166074
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:43:36.179444
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:43:56.205243
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:44:16.231342
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:44:36.246852
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:44:56.259142
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:45:16.269777
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:45:36.284044
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:45:56.311686
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:46:16.319872
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:46:36.346136
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:46:56.357859
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:47:16.380010
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:47:36.406668
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:47:56.432013
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:48:16.458205
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:48:36.486137
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:48:56.512052
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:49:16.528028
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:49:36.554114
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:49:56.564041
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:50:16.579868
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:50:36.606784
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:50:56.616108
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:51:16.643143
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:51:36.668183
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:51:56.674897
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:52:16.702092
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:52:36.728614
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:52:56.754658
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:53:16.781163
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:53:36.807280
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:53:56.833037
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:54:16.858643
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:54:36.880145
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:54:56.906408
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:55:16.932153
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:55:36.942404
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:55:56.968864
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:56:16.994305
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:56:37.000944
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:56:57.026467
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:57:17.052513
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:57:37.078997
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:57:57.105859
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:58:17.132250
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:58:37.140163
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:58:57.161785
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:59:17.188422
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:59:37.204093
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 09:59:57.230992
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:00:17.258047
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:00:37.283798
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:00:57.307190
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:01:17.326446
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:01:37.348105
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:01:57.369439
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:02:17.388036
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:02:37.414191
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:02:57.439019
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:03:17.448003
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:03:37.461765
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:03:57.488752
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:04:17.514883
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:04:37.540338
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:04:57.554552
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:05:17.580602
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:05:37.606571
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:05:57.631996
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:06:17.646251
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:06:37.668035
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:06:57.688017
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:07:17.712005
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:07:37.735977
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:07:57.761442
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:08:17.768030
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:08:37.788002
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:08:57.814238
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:09:17.840135
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:09:37.867022
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:09:57.887985
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:10:17.914487
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:10:37.941245
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:10:57.963988
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:11:17.971638
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:11:37.988011
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:11:58.013895
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:12:18.038650
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:12:38.055991
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:12:58.071513
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:13:18.096784
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:13:38.122504
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:13:58.136091
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:14:18.162264
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:14:38.174816
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:14:58.183987
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:15:18.191438
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:15:38.218628
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:15:58.244161
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:16:18.270700
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:16:38.297299
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:16:58.323747
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:17:18.350041
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:17:38.361753
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:17:58.385491
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:18:18.411721
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:18:38.437965
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:18:58.458907
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:19:18.481394
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:19:38.508146
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:19:58.535044
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:20:18.561187
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:20:38.587357
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:20:58.613992
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:21:18.630130
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:21:38.656647
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:21:58.683506
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:22:18.710295
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:22:38.718960
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:22:58.743973
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:23:18.752009
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:23:38.778224
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:23:58.803970
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:24:18.830112
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:24:38.849395
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:24:58.859997
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:25:18.885932
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:25:38.907987
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:25:58.934144
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:26:18.959710
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:26:38.980343
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:26:58.995999
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:27:19.021767
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:27:39.032547
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:27:59.047986
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:28:19.071994
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:28:39.083853
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:28:59.090116
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:29:19.096736
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:29:39.123392
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:29:59.134491
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:30:19.146251
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:30:39.171957
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:30:59.188016
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:31:19.214285
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:31:39.224030
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:31:59.230752
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:32:19.256140
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:32:39.282053
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:32:59.307739
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:33:19.333908
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:33:39.360016
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:33:59.386574
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:34:19.413739
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:34:39.440286
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:34:59.465546
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:35:19.491445
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:35:39.519164
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:35:59.537638
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:36:19.563808
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:36:39.589966
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:36:59.617103
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:37:19.631514
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:37:39.639099
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:37:59.665758
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:38:19.692042
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:38:39.708037
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:38:59.719617
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:39:19.745585
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:39:39.772003
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:39:59.779058
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:40:19.805262
+Total requests sum is zero, cannot compute average response time.
+Trigger = False
+No migration needed.
+Running the scheduler...: 2025-03-19 10:40:39.832135
