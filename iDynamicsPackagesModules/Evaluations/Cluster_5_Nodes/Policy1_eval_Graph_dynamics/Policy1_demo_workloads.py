@@ -25,7 +25,7 @@ def wrk_different_requests(req_script: str, url: str, each_request_duration: str
         urls = url
 
     # Define the output directory path and expand the tilde to the home directory.
-    output_dir = os.path.expanduser("~/iDynamics/iDynamicsPackagesModules/Evaluations/Policy1_eval_Graph_dynamics/Policy1_demo_data/")
+    output_dir = os.path.expanduser("~/iDynamics/iDynamicsPackagesModules/Evaluations/Cluster_5_Nodes/Policy1_eval_Graph_dynamics/Policy1_demo_data/")
     # Create the directory if it doesn't exist.
     os.makedirs(output_dir, exist_ok=True)
 
