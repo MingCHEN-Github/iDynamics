@@ -92,16 +92,19 @@ from multiprocessing import Pool
 from datetime import datetime
 
 def main():
+    # Evaluate with five worker nodes for the newly installed microservice applications
+    
     node_details = {
         'k8s-worker-1': {'ip': '172.26.128.30', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'},
         'k8s-worker-2': {'ip': '172.26.132.91', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'},
         'k8s-worker-3': {'ip': '172.26.133.31', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'},
         'k8s-worker-4': {'ip': '172.26.132.241', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'},
-        'k8s-worker-5': {'ip': '172.26.132.142', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'},
-        'k8s-worker-6': {'ip': '172.26.133.55', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'},
-        'k8s-worker-7': {'ip': '172.26.130.22', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'},
-        'k8s-worker-8': {'ip': '172.26.130.82', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'},
-        'k8s-worker-9': {'ip': '172.26.133.118', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'}
+        'k8s-worker-5': {'ip': '172.26.132.142', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'}
+        # ,
+        # 'k8s-worker-6': {'ip': '172.26.133.55', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'},
+        # 'k8s-worker-7': {'ip': '172.26.130.22', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'},
+        # 'k8s-worker-8': {'ip': '172.26.130.82', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'},
+        # 'k8s-worker-9': {'ip': '172.26.133.118', 'username': 'ubuntu', 'key_path': '/home/ubuntu/.ssh/id_rsa'}
     }
 
     thread_num = 8
@@ -113,30 +116,30 @@ def main():
     
     script_path = "/home/ubuntu/DeathStarBench/socialNetwork/wrk2/scripts/social-network/compose-post.lua"
     urls = [
-        "http://nginx-thrift.social-network2.svc.cluster.local:8080/wrk2-api/post/compose",
+        "http://nginx-thrift.social-network.svc.cluster.local:8080/wrk2-api/post/compose",
         "http://nginx-thrift.social-network4.svc.cluster.local:8080/wrk2-api/post/compose"
     ]
     timestamp = datetime.now().strftime("%Y_%b_%d_%H%M")  # Example: 2024_Oct_20_1930
 
-    output_file = f"/home/ubuntu/iDynamics/iDynamicsPackagesModules/Evaluations/Policy4_eval_hybrid_dynamics/data/{timestamp}__wrk_result.txt"
+    output_file = f"/home/ubuntu/iDynamics/iDynamicsPackagesModules/Evaluations/Cluster_5_Nodes/Policy4_eval_hybrid_dynamics/data/{timestamp}__wrk_result.txt"
 
     # Total number of intervals equal to the length of QPS_trend
     total_duration_seconds = int(duration.replace('m', '')) * 60  # Convert duration to seconds
     num_intervals = len(QPS_trend)
     interval_duration = total_duration_seconds // num_intervals  # Duration per QPS
    
-
+    num_nodes = len(node_details) # generating N*N delay matrix, N= num_nodes of worker nodes
     def latency_task():
         start_time = time.time()
         while time.time() - start_time < total_duration_seconds:  # Run for total duration
             if delay_changing_interval == 0:
-                delay_matrix = generate_delay_matrix(9, 0, 0)
+                delay_matrix = generate_delay_matrix(num_nodes, 0, 0)
             elif delay_changing_interval == 1:
-                delay_matrix = generate_delay_matrix(9, 5, 10)
+                delay_matrix = generate_delay_matrix(num_nodes, 5, 10)
             elif delay_changing_interval == 2:
-                delay_matrix = generate_delay_matrix(9, 5, 30)
+                delay_matrix = generate_delay_matrix(num_nodes, 5, 30)
             else:
-                delay_matrix = generate_delay_matrix(9, 5, 20)
+                delay_matrix = generate_delay_matrix(num_nodes, 5, 20)
 
             # Apply latency injection
             params_list = [(source_node, delay_matrix, node_details) for source_node in node_details.keys()]
