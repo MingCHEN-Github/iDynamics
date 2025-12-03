@@ -9,7 +9,7 @@ import multiprocessing as mp
 import time
 import concurrent.futures
 
-class TraDE_MicroserviceScheduler:
+class Policy4:
     def __init__(self, prom_url, qos_target, time_window, namespace, response_code='200'):
         # Kubernetes Config
         config.load_kube_config()
@@ -306,7 +306,7 @@ class TraDE_MicroserviceScheduler:
         """
         Greedy placement algorithm to minimize communication cost and enforce resource constraints.
         """
-        current_cost = TraDE_MicroserviceScheduler.calculate_communication_cost(exec_graph, placement, delay_matrix, resource_demand, server_capacities)
+        current_cost = Policy4.calculate_communication_cost(exec_graph, placement, delay_matrix, resource_demand, server_capacities)
         improved = True
         while improved:
             improved = False
@@ -320,7 +320,7 @@ class TraDE_MicroserviceScheduler:
                             new_placement[u] = new_server_u
                             new_placement[v] = new_server_v
 
-                            new_cost = TraDE_MicroserviceScheduler.calculate_communication_cost(exec_graph, new_placement, delay_matrix, resource_demand, server_capacities)
+                            new_cost = Policy4.calculate_communication_cost(exec_graph, new_placement, delay_matrix, resource_demand, server_capacities)
                             if new_cost < current_cost:
                                 placement = new_placement
                                 current_cost = new_cost
@@ -337,13 +337,13 @@ class TraDE_MicroserviceScheduler:
         """
         Parallel greedy placement optimization with capacity constraints.
         """
-        sorted_pairs = TraDE_MicroserviceScheduler.sort_microservice_pairs(exec_graph)
-        chunks = TraDE_MicroserviceScheduler.divide_pairs_into_chunks(sorted_pairs, num_workers)
+        sorted_pairs = Policy4.sort_microservice_pairs(exec_graph)
+        chunks = Policy4.divide_pairs_into_chunks(sorted_pairs, num_workers)
 
         while True:
             pool = mp.Pool(num_workers)
             tasks = [(exec_graph, delay_matrix, placement, num_servers, resource_demand, server_capacities, chunk) for chunk in chunks]
-            results = pool.starmap(TraDE_MicroserviceScheduler.greedy_placement_worker, tasks)
+            results = pool.starmap(Policy4.greedy_placement_worker, tasks)
             pool.close()
             pool.join()
 
@@ -629,7 +629,7 @@ if __name__ == "__main__":
     response_code = '200'  # HTTP response code to consider
 
     # Create an instance of the scheduler
-    scheduler = TraDE_MicroserviceScheduler(prom_url, qos_target, time_window, namespace, response_code)
+    scheduler = Policy4(prom_url, qos_target, time_window, namespace, response_code)
 
     # Run the scheduler
     while True:
